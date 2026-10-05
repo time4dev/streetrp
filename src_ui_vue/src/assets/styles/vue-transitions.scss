@@ -1,0 +1,206 @@
+// Vue <Transition> aliases for the react-transition-group classes
+// defined in assets/styles/components/transitions.scss.
+// Class names follow react-transition-group conventions so no legacy rule had to change.
+
+/* alert */
+.alert-enter-from {
+	opacity: 0;
+	transform: scale(0.98);
+}
+.alert-enter-active {
+	opacity: 1;
+	transform: translateX(0);
+	transition: opacity 300ms, transform 300ms;
+}
+.alert-enter-to {
+	opacity: 1;
+	transform: translateX(0);
+}
+.alert-leave-from {
+	opacity: 1;
+}
+.alert-leave-active {
+	transition: opacity 300ms, transform 300ms;
+}
+.alert-leave-to {
+	opacity: 0;
+	transform: scale(0.98);
+}
+
+/* ios */
+.ios-enter-from {
+	opacity: 0;
+	transform: scale(0.1);
+}
+.ios-enter-active {
+	opacity: 1;
+	transform: translateX(0);
+	transition: opacity 300ms, transform 300ms;
+}
+.ios-enter-to {
+	opacity: 1;
+	transform: translateX(0);
+}
+.ios-leave-from {
+	opacity: 1;
+}
+.ios-leave-active {
+	transition: opacity 300ms, transform 350ms;
+}
+.ios-leave-to {
+	opacity: 0;
+	transform: scale(0.1);
+}
+
+/* fadeIn */
+.fadeIn-enter-from {
+	opacity: 0;
+}
+.fadeIn-enter-active {
+	opacity: 1;
+	transition: opacity 200ms;
+}
+.fadeIn-enter-to {
+	opacity: 1;
+}
+.fadeIn-leave-from {
+	opacity: 1;
+}
+.fadeIn-leave-active {
+	transition: opacity 200ms;
+}
+.fadeIn-leave-to {
+	opacity: 0;
+}
+
+/* slideLeft */
+.slideLeft-enter-from {
+	opacity: 0;
+	transform: translate3d(-20%, 0, 0);
+}
+.slideLeft-enter-active {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+	transition: opacity 300ms, transform 300ms;
+}
+.slideLeft-enter-to {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+}
+.slideLeft-leave-from {
+	opacity: 0.8;
+	transform: translate3d(-20%, 0, 0);
+}
+.slideLeft-leave-active {
+	transition: opacity 300ms, transform 280ms;
+}
+.slideLeft-leave-to {
+	opacity: 0;
+	transform: translate3d(0, 0, 0);
+}
+
+/* slideRight */
+.slideRight-enter-from {
+	opacity: 0;
+	transform: translate3d(20%, 0, 0);
+}
+.slideRight-enter-active {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+	transition: opacity 300ms, transform 300ms;
+}
+.slideRight-enter-to {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+}
+.slideRight-leave-from {
+	opacity: 0.8;
+	transform: translate3d(20%, 0, 0);
+}
+.slideRight-leave-active {
+	transition: opacity 300ms, transform 280ms;
+}
+.slideRight-leave-to {
+	opacity: 0;
+	transform: translate3d(0, 0, 0);
+}
+
+/* slideUp */
+.slideUp-enter-from {
+	opacity: 0;
+	transform: translate3d(0, 100%, 0);
+}
+.slideUp-enter-active {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+	transition: opacity 300ms, transform 300ms;
+}
+.slideUp-enter-to {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+}
+.slideUp-leave-from {
+	opacity: 0.8;
+	transform: translate3d(0, 100%, 0);
+}
+.slideUp-leave-active {
+	transition: opacity 300ms, transform 280ms;
+}
+.slideUp-leave-to {
+	opacity: 0;
+	transform: translate3d(0, 0, 0);
+}
+
+/* react-toastify Zoom transition (hud container) */
+.toast-zoom-enter-from {
+	opacity: 0;
+	transform: scale3d(0.3, 0.3, 0.3);
+}
+.toast-zoom-enter-active {
+	opacity: 1;
+	transform: scale3d(1, 1, 1);
+	transition: opacity 300ms, transform 300ms;
+}
+.toast-zoom-enter-to {
+	opacity: 1;
+	transform: scale3d(1, 1, 1);
+}
+.toast-zoom-leave-from {
+	opacity: 1;
+	transform: scale3d(1, 1, 1);
+}
+.toast-zoom-leave-active {
+	transition: opacity 200ms, transform 200ms;
+}
+.toast-zoom-leave-to {
+	opacity: 0;
+	transform: scale3d(0.3, 0.3, 0.3);
+}
+
+/* react-toastify Flip transition (menu container) */
+.toast-flip-enter-from {
+	transform: perspective(400px) rotateX(45deg);
+	opacity: 0;
+}
+.toast-flip-enter-active {
+	transform: perspective(400px) rotateX(0deg);
+	opacity: 1;
+	transition: transform 300ms, opacity 300ms;
+}
+.toast-flip-enter-to {
+	transform: perspective(400px) rotateX(0deg);
+	opacity: 1;
+}
+.toast-flip-leave-from {
+	transform: perspective(400px) rotateX(0deg);
+	opacity: 1;
+}
+.toast-flip-leave-active {
+	transform: perspective(400px) rotateX(45deg);
+	opacity: 0;
+	transition: transform 300ms, opacity 300ms;
+}
+.toast-flip-leave-to {
+	transform: perspective(400px) rotateX(45deg);
+	opacity: 0;
+}
