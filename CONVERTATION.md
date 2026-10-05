@@ -156,6 +156,27 @@ pnpm typecheck  # только проверка типов
 
 ---
 
+## Dev-режим без RAGE:MP-клиента
+
+`pnpm dev` (и `pnpm preview`) полностью работают в обычном браузере, без запущенной игры:
+
+- **Мок `mp`** (`index.html`): если `window.mp` отсутствует (т.е. страница открыта не в CEF RAGE), устанавливается no-op мок (`invoke`/`trigger`/`events`) — тот же подход, что в легаси (`%NODE_ENV% === 'development'`), но без завязки на NODE_ENV. В реальном CEF мок не устанавливается, т.к. клиент инжектит `mp` до выполнения скриптов.
+- **Устойчивый RPC** (`utils/rpc.ts`): мок распознаётся по флагу `__mock`. Без RAGE:
+  - `rpc.register` / `rpc.unregister` сохраняют обработчики локально (код экранов выполняется как обычно);
+  - `rpc.callServer` / `rpc.callClient` **мгновенно отклоняются** с понятной ошибкой вместо вечного зависания promise (экраны рендерятся с дефолтным состоянием, catch-ветки работают).
+- **Эмуляция событий из консоли** — `rpcDev`:
+  ```js
+  rpcDev.list()                                   // какие входящие события зарегистрированы
+  rpcDev.call('Browser-ShowPage', 'auth')         // открыть экран авторизации
+  rpcDev.call('HUD-SetVisible', false)            // скрыть HUD
+  rpcDev.call('Player-SetMoney', { cash: 5000, bank: 0, points: 10 })
+  rpcDev.call('Phone-IncomingCall', '100')        // входящий звонок
+  rpcDev.call('Notifications-ShowItem', 'info', 'Привет', false)
+  ```
+  Так можно прогнать любой экран UI в браузере, подавая те же события, что сервер шлёт в игре.
+
+---
+
 ## Статистика
 
 - Переписано компонентов/модулей: **317** файлов в `components/` + 5 stores + 8 utils + 5 composables + 10 f7-обёрток.

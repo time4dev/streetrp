@@ -11,6 +11,12 @@ declare module 'rage-rpc';
 
 interface Window {
 	mp: any;
+	rpcDev?: {
+		/** Dev mode: emulate an incoming RPC event (e.g. rpcDev.call('Browser-ShowPage', 'auth')) */
+		call: (name: string, ...args: any[]) => void;
+		/** Dev mode: list locally registered handlers */
+		list: () => string[];
+	};
 	chatAPI?: {
 		push: (text: string) => void;
 		activate: (status: boolean) => void;

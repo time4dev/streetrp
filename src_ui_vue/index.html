@@ -4,6 +4,24 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Street Role Play UI</title>
+		<script>
+			// RAGE:MP injects the `mp` API into CEF before page scripts run.
+			// In a plain browser (pnpm dev / preview) it is missing, so we install
+			// a no-op mock — same idea as the legacy `%NODE_ENV%` check in index.html.
+			// utils/rpc.ts detects the mock via __mock and rejects RPC calls gracefully.
+			if (!window.mp) {
+				window.mp = {
+					__mock: true,
+					invoke: function () {},
+					trigger: function () {},
+					events: {
+						add: function () {},
+						remove: function () {},
+						call: function () {}
+					}
+				};
+			}
+		</script>
 	</head>
 	<body>
 		<div id="root"></div>
