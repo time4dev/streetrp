@@ -22,7 +22,7 @@
 	<div class="chat_form">
 		<form @submit.prevent="submit">
 			<div class="chat_form-container">
-				<input v-model="value" type="text" class="chat_form-input" ref="inputEl" />
+				<input v-model="value" type="text" ref="inputEl" />
 
 				<button type="submit" class="chat_form-submit">
 					<IoIosSend />
