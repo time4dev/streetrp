@@ -20,7 +20,12 @@ class Follow {
 
 	reset(local = true) {
 		this.target = null;
-		clearInterval(this.followInterval);
+
+		if (this.followInterval) {
+			clearInterval(this.followInterval);
+			this.followInterval = null;
+		}
+
 		localPlayer.clearTasks();
 
 		if (!local) mp.events.callServer('FollowActions-Reset');
