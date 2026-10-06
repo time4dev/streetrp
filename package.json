@@ -19,8 +19,11 @@
 	"pnpm": {
 		"onlyBuiltDependencies": [
 			"esbuild",
-			"vue-demi",
-			"mongodb-client-encryption"
+			"framework7",
+			"javascript-obfuscator",
+			"mongodb-client-encryption",
+			"swiper",
+			"vue-demi"
 		]
 	},
 	"dependencies": {
