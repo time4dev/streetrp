@@ -1,58 +1,74 @@
 <script setup lang="ts">
-	import { onMounted, ref } from 'vue';
+	import { ref } from 'vue';
+	import Select from 'primevue/select';
 	import rpc from '@/utils/rpc';
-	import Select from './select.vue';
 
-	type Player = {
-		dbId: string;
+	export type PlayerOption = {
 		id: number;
-		name: string;
-	};
-	type Option = {
-		value: number;
-		label: string;
 		dbId: string;
+		name: string;
+		label: string;
 	};
 
-	const props = defineProps<{
-		onChange: (data: Omit<Player, 'name'>) => void;
-	}>();
+	withDefaults(
+		defineProps<{
+			placeholder?: string;
+			invalid?: boolean;
+		}>(),
+		{
+			placeholder: 'Выберите игрока',
+			invalid: false
+		}
+	);
 
-	const options = ref<Option[]>([]);
-	const selected = ref<Option | null>(null);
+	const emit = defineEmits<{ select: [player: PlayerOption | null] }>();
 
-	async function fetchPlayers() {
-		if (options.value.length > 0) return;
+	const options = ref<PlayerOption[]>([]);
+	const selected = ref<PlayerOption | null>(null);
+	const loading = ref(false);
+	let loaded = false;
 
-		const data: Player[] = await rpc.callServer('Admin-GetPlayers');
-		const prepared = data.map((item) => ({
-			value: item.id,
-			label: `${item.name} (${item.id})`,
-			dbId: item.dbId
-		}));
+	async function loadOptions() {
+		if (loaded || loading.value) return;
 
-		options.value = prepared;
+		loading.value = true;
+
+		try {
+			const data = (await rpc.callServer('Admin-GetPlayers')) as {
+				id: number;
+				dbId: string;
+				name: string;
+			}[];
+
+			options.value = data.map((item) => ({
+				id: item.id,
+				dbId: item.dbId,
+				name: item.name,
+				label: `${item.name} (${item.id})`
+			}));
+			loaded = true;
+		} finally {
+			loading.value = false;
+		}
 	}
 
-	function selectPlayer(data: Option | null) {
-		selected.value = data;
-
-		if (data) {
-			props.onChange({ dbId: data.dbId, id: data.value });
-		}
+	function onChange(value: PlayerOption | null) {
+		selected.value = value;
+		emit('select', value ?? null);
 	}
 </script>
 
 <template>
-	<div class="admin_players">
-		<Select
-			className="admin_select"
-			className-prefix="admin_select"
-			placeholder="Игрок"
-			:options="options"
-			:no-options-message="() => 'Не найден'"
-			:on-menu-open="fetchPlayers"
-			@change="(data: any) => selectPlayer(data)"
-		/>
-	</div>
+	<Select
+		:model-value="selected"
+		:options="options"
+		option-label="label"
+		:placeholder="placeholder"
+		:loading="loading"
+		:invalid="invalid"
+		filter
+		show-clear
+		@show="loadOptions"
+		@update:model-value="onChange"
+	/>
 </template>

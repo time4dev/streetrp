@@ -1,9 +1,9 @@
 <script setup lang="ts">
-	import { useForm } from 'vee-validate';
+	import { useField, useForm } from 'vee-validate';
 	import * as yup from 'yup';
+	import Button from 'primevue/button';
 	import rpc from '@/utils/rpc';
 	import { showNotification } from '@/utils/notifications';
-	import GradientButton from '@/components/Common/gradient-button.vue';
 	import factionsData from '@/data/factions.json';
 	import Select from '../partials/select.vue';
 	import Players from '../partials/players.vue';
@@ -11,39 +11,50 @@
 	const { handleSubmit, setFieldValue } = useForm({
 		initialValues: { faction: '', player: '' },
 		validationSchema: yup.object({
-			faction: yup.string().required(),
-			player: yup.string().required()
+			faction: yup.string().required('Выберите организацию'),
+			player: yup.string().required('Выберите игрока')
 		})
 	});
 
-	async function setLeader(player: string, faction: string) {
+	const { value: faction, errorMessage: factionError } = useField<string>('faction');
+	const { value: player, errorMessage: playerError } = useField<string>('player');
+
+	const factionOptions = Object.entries(factionsData as Record<string, string>).map(
+		([value, label]) => ({ value, label })
+	);
+
+	const onSubmit = handleSubmit(async (values: any) => {
 		try {
-			await rpc.callServer('Admin-SetFactionLeader', [player, faction]);
+			await rpc.callServer('Admin-SetFactionLeader', [values.player, values.faction]);
+
 			showNotification('success', 'Игрок назначен лидером организации');
 		} catch (err: any) {
-			if (err.msg) showNotification('error', err.msg);
+			showNotification('error', err?.msg ?? 'Не удалось назначить лидера');
 		}
-	}
-
-	const onSubmit = handleSubmit(({ faction, player }: any) => setLeader(player, faction));
+	});
 </script>
 
 <template>
-	<form @submit="onSubmit">
-		<Select
-			className="admin_select"
-			className-prefix="admin_select"
-			placeholder="Организация"
-			:options="Object.entries(factionsData).map(([value, label]) => ({
-				value,
-				label
-			}))"
-			:no-options-message="() => 'Не найдено'"
-			@change="(option: any) => setFieldValue('faction', option?.value)"
-		/>
+	<form class="admin__form" @submit="onSubmit">
+		<div class="admin__field">
+			<label class="admin__label">Организация</label>
+			<Select
+				v-model="faction"
+				:options="factionOptions"
+				:invalid="!!factionError"
+				placeholder="Выберите организацию"
+			/>
+			<small v-if="factionError" class="admin__error">{{ factionError }}</small>
+		</div>
 
-		<Players :on-change="(data: any) => setFieldValue('player', data.dbId)" />
+		<div class="admin__field">
+			<label class="admin__label">Игрок</label>
+			<Players :invalid="!!playerError" @select="(p: any) => setFieldValue('player', p?.dbId)" />
+			<small v-if="playerError" class="admin__error">{{ playerError }}</small>
+		</div>
 
-		<GradientButton type="submit">Назначить</GradientButton>
+		<div class="admin__actions">
+			<Button type="submit" label="Назначить" />
+		</div>
 	</form>
 </template>

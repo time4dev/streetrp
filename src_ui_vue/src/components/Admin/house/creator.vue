@@ -1,52 +1,43 @@
 <script setup lang="ts">
-	import { useForm } from 'vee-validate';
+	import { useField, useForm } from 'vee-validate';
 	import * as yup from 'yup';
+	import Button from 'primevue/button';
 	import rpc from '@/utils/rpc';
 	import { showNotification } from '@/utils/notifications';
-	import GradientButton from '@/components/Common/gradient-button.vue';
 	import Select from '../partials/select.vue';
 
 	const classes = [
-		{
-			value: 'low',
-			label: 'Эконом'
-		},
-		{
-			value: 'average',
-			label: 'Средний'
-		},
-		{
-			value: 'premium',
-			label: 'Премиум'
-		}
+		{ value: 'low', label: 'Эконом' },
+		{ value: 'average', label: 'Средний' },
+		{ value: 'premium', label: 'Премиум' }
 	];
 
-	const { handleSubmit, setFieldValue } = useForm({
+	const { handleSubmit } = useForm({
 		initialValues: { type: '' },
 		validationSchema: yup.object({
-			type: yup.string().required()
+			type: yup.string().required('Выберите класс дома')
 		})
 	});
 
-	async function createHouse(type: string) {
-		await rpc.callServer('Admin-CreateHouse', type);
-		showNotification('success', 'Дом успешно построен');
-	}
+	const { value: type, errorMessage: typeError } = useField<string>('type');
 
-	const onSubmit = handleSubmit((values: any) => createHouse(values.type));
+	const onSubmit = handleSubmit(async (values: any) => {
+		await rpc.callServer('Admin-CreateHouse', values.type);
+
+		showNotification('success', 'Дом построен');
+	});
 </script>
 
 <template>
-	<form @submit="onSubmit">
-		<Select
-			className="admin_select"
-			className-prefix="admin_select"
-			placeholder="Класс дома"
-			:options="classes"
-			:no-options-message="() => 'Не найден'"
-			@change="(option: any) => setFieldValue('type', option?.value)"
-		/>
+	<form class="admin__form" @submit="onSubmit">
+		<div class="admin__field">
+			<label class="admin__label">Класс дома</label>
+			<Select v-model="type" :options="classes" :invalid="!!typeError" placeholder="Выберите класс" />
+			<small v-if="typeError" class="admin__error">{{ typeError }}</small>
+		</div>
 
-		<GradientButton type="submit">Создать</GradientButton>
+		<div class="admin__actions">
+			<Button type="submit" label="Создать" />
+		</div>
 	</form>
 </template>

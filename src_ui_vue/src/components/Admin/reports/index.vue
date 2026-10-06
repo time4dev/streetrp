@@ -1,7 +1,10 @@
 <script setup lang="ts">
-	import { onBeforeUnmount, onMounted, ref } from 'vue';
+	import { onMounted, ref } from 'vue';
+	import DataTable from 'primevue/datatable';
+	import Column from 'primevue/column';
+	import Button from 'primevue/button';
 	import rpc from '@/utils/rpc';
-	import Item from './item.vue';
+	import dayjs from '@/utils/dayjs';
 
 	type Report = {
 		_id: string;
@@ -11,41 +14,25 @@
 	};
 
 	const items = ref<Report[]>([]);
-	const hasMore = ref(false);
-	const listEl = ref<HTMLElement>();
+	const loading = ref(false);
+	const hasMore = ref(true);
+
 	let page = 0;
-	let loading = false;
 
-	onMounted(() => {
-		fetchItems(0);
+	async function fetchItems() {
+		if (loading.value || !hasMore.value) return;
 
-		// react-infinite-scroller (useWindow=false) equivalent
-		listEl.value?.addEventListener('scroll', onScroll);
-	});
+		loading.value = true;
 
-	onBeforeUnmount(() => {
-		listEl.value?.removeEventListener('scroll', onScroll);
-	});
+		try {
+			const data = (await rpc.callServer('Admin-GetReports', page)) as Report[];
 
-	function onScroll() {
-		const el = listEl.value;
-
-		if (!el || !hasMore.value || loading) return;
-
-		if (el.scrollTop + el.clientHeight >= el.scrollHeight - 1) {
-			fetchItems(page);
+			items.value = [...items.value, ...data];
+			hasMore.value = data.length >= 20;
+			page += 1;
+		} finally {
+			loading.value = false;
 		}
-	}
-
-	async function fetchItems(nextPage: number) {
-		loading = true;
-
-		const data: Report[] = await rpc.callServer('Admin-GetReports', nextPage);
-
-		items.value = [...items.value, ...data];
-		hasMore.value = data.length > 10;
-		page = nextPage + 1;
-		loading = false;
 	}
 
 	async function acceptReport(id: string) {
@@ -53,19 +40,61 @@
 
 		items.value = items.value.filter((item) => item._id !== id);
 	}
+
+	onMounted(fetchItems);
 </script>
 
 <template>
-	<div class="admin_reports">
-		<div ref="listEl" class="admin_reports-list">
-			<Item
-				v-for="item in items"
-				:key="item._id"
-				:sender="item.sender"
-				:message="item.message"
-				:time="item.timestamp"
-				:on-accept="() => acceptReport(item._id)"
-			/>
-		</div>
+	<div class="admin__pane">
+		<h3 class="admin__pane-title">Репорты</h3>
+		<p class="admin__pane-hint">Обращения игроков к администрации</p>
+
+		<DataTable
+			:value="items"
+			:loading="loading"
+			data-key="_id"
+			paginator
+			:rows="8"
+			:rows-per-page-options="[8, 16, 32]"
+			class="admin__table"
+		>
+			<Column field="sender" header="Отправитель" style="width: 18%" />
+
+			<Column field="message" header="Сообщение" body-class="admin__report-message" />
+
+			<Column header="Время" style="width: 16%">
+				<template #body="{ data }">
+					<span class="admin__report-time">
+						{{ dayjs(data.timestamp).format('DD.MM.YY, HH:mm') }}
+					</span>
+				</template>
+			</Column>
+
+			<Column header="" style="width: 10%">
+				<template #body="{ data }">
+					<Button
+						text
+						severity="success"
+						label="Принять"
+						@click="acceptReport(data._id)"
+					/>
+				</template>
+			</Column>
+
+			<template #empty>
+				<div class="admin__empty">Активных репортов нет</div>
+			</template>
+
+			<template #footer>
+				<div v-if="hasMore" class="admin__actions">
+					<Button
+						text
+						label="Загрузить ещё"
+						:loading="loading"
+						@click="fetchItems"
+					/>
+				</div>
+			</template>
+		</DataTable>
 	</div>
 </template>

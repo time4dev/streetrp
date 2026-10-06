@@ -1,43 +1,62 @@
 <script setup lang="ts">
-	import { useForm, useField } from 'vee-validate';
+	import { useField, useForm } from 'vee-validate';
 	import * as yup from 'yup';
+	import InputNumber from 'primevue/inputnumber';
+	import Button from 'primevue/button';
 	import rpc from '@/utils/rpc';
 	import { showNotification } from '@/utils/notifications';
-	import GradientButton from '@/components/Common/gradient-button.vue';
 	import Players from '../partials/players.vue';
 
 	const { handleSubmit, setFieldValue } = useForm({
-		initialValues: { sum: '', player: '' },
+		initialValues: { sum: 0, player: '' },
 		validationSchema: yup.object({
-			sum: yup.number().required().min(1).max(10000000),
-			player: yup.string().required()
+			sum: yup.number().required('Введите сумму').min(1).max(10000000),
+			player: yup.string().required('Выберите игрока')
 		})
 	});
 
-	const { value: sum } = useField<number | string>('sum');
+	const { value: sum, errorMessage: sumError } = useField<number>('sum');
+	const { value: player, errorMessage: playerError } = useField<string>('player');
 
-	async function giveMoney(player: string, amount: number) {
-		await rpc.callServer('Admin-ChangeMoney', [player, amount]);
+	async function giveMoney() {
+		await rpc.callServer('Admin-ChangeMoney', [player.value, Number(sum.value)]);
+
 		showNotification('success', 'Операция успешна');
 	}
 
-	const onSubmit = handleSubmit((values: any) => giveMoney(values.player, +values.sum));
+	const onSubmit = handleSubmit(giveMoney);
 </script>
 
 <template>
-	<div class="admin_money">
-		<form @submit="onSubmit">
-			<input
-				v-model="sum"
-				class="admin_field"
-				type="number"
-				name="sum"
-				placeholder="Сумма"
-			/>
+	<div class="admin__pane">
+		<h3 class="admin__pane-title">Валюта</h3>
+		<p class="admin__pane-hint">Начислить средства на банковский счёт игрока</p>
 
-			<Players :on-change="(data: any) => setFieldValue('player', data.dbId)" />
+		<form class="admin__form" @submit="onSubmit">
+			<div class="admin__field">
+				<label class="admin__label">Игрок</label>
+				<Players :invalid="!!playerError" @select="(p: any) => setFieldValue('player', p?.dbId)" />
+				<small v-if="playerError" class="admin__error">{{ playerError }}</small>
+			</div>
 
-			<GradientButton type="submit">Начислить</GradientButton>
+			<div class="admin__field">
+				<label class="admin__label">Сумма</label>
+				<InputNumber
+					v-model="sum"
+					:invalid="!!sumError"
+					mode="currency"
+					currency="USD"
+					locale="en-US"
+					:min="1"
+					:max="10000000"
+					show-buttons
+				/>
+				<small v-if="sumError" class="admin__error">{{ sumError }}</small>
+			</div>
+
+			<div class="admin__actions">
+				<Button type="submit" label="Начислить" />
+			</div>
 		</form>
 	</div>
 </template>

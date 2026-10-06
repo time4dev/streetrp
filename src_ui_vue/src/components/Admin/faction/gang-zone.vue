@@ -1,45 +1,47 @@
 <script setup lang="ts">
-	import { useForm } from 'vee-validate';
+	import { useField, useForm } from 'vee-validate';
 	import * as yup from 'yup';
+	import Button from 'primevue/button';
 	import rpc from '@/utils/rpc';
 	import { showNotification } from '@/utils/notifications';
-	import GradientButton from '@/components/Common/gradient-button.vue';
 	import factionsData from '@/data/factions.json';
 	import Select from '../partials/select.vue';
 
-	const { handleSubmit, setFieldValue } = useForm({
+	const { handleSubmit } = useForm({
 		initialValues: { faction: '' },
 		validationSchema: yup.object({
-			faction: yup.string().required()
+			faction: yup.string().required('Выберите организацию')
 		})
 	});
 
-	async function setOwner(faction: string) {
-		try {
-			await rpc.callServer('Admin-SetZoneOwner', faction);
-			showNotification('success', 'Назначен новый владелец территории');
-		} catch (err: any) {
-			if (err.msg) showNotification('error', err.msg);
-		}
-	}
+	const { value: faction, errorMessage: factionError } = useField<string>('faction');
 
-	const onSubmit = handleSubmit(({ faction }: any) => setOwner(faction));
+	const factionOptions = Object.entries(factionsData as Record<string, string>).map(
+		([value, label]) => ({ value, label })
+	);
+
+	const onSubmit = handleSubmit(async (values: any) => {
+		await rpc.callServer('Admin-SetZoneOwner', values.faction);
+
+		showNotification('success', 'Назначен новый владелец территории');
+	});
 </script>
 
 <template>
-	<form @submit="onSubmit">
-		<Select
-			className="admin_select"
-			className-prefix="admin_select"
-			placeholder="Организация"
-			:options="Object.entries(factionsData).map(([value, label]) => ({
-				value,
-				label
-			}))"
-			:no-options-message="() => 'Не найдено'"
-			@change="(option: any) => setFieldValue('faction', option?.value)"
-		/>
+	<form class="admin__form" @submit="onSubmit">
+		<div class="admin__field">
+			<label class="admin__label">Организация</label>
+			<Select
+				v-model="faction"
+				:options="factionOptions"
+				:invalid="!!factionError"
+				placeholder="Выберите организацию"
+			/>
+			<small v-if="factionError" class="admin__error">{{ factionError }}</small>
+		</div>
 
-		<GradientButton type="submit">Назначить</GradientButton>
+		<div class="admin__actions">
+			<Button type="submit" label="Назначить" />
+		</div>
 	</form>
 </template>

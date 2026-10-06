@@ -1,54 +1,65 @@
 <script setup lang="ts">
-	import { useForm, useField } from 'vee-validate';
+	import { ref } from 'vue';
+	import { useField, useForm } from 'vee-validate';
 	import * as yup from 'yup';
+	import InputText from 'primevue/inputtext';
+	import Button from 'primevue/button';
 	import rpc from '@/utils/rpc';
 	import { showNotification } from '@/utils/notifications';
-	import GradientButton from '@/components/Common/gradient-button.vue';
 	import vehiclesData from '@/data/vehicles.json';
-import Select from '../partials/select.vue';	import Checkbox from '../partials/checkbox.vue';
+	import Select from '../partials/select.vue';
+	import Checkbox from '../partials/checkbox.vue';
 	import Players from '../partials/players.vue';
 
 	const { handleSubmit, setFieldValue } = useForm({
 		initialValues: { model: '', player: '', temporary: false },
 		validationSchema: yup.object({
-			model: yup.string().required().min(1).max(1000)
+			model: yup.string().required('Укажите модель').min(1).max(1000)
 		})
 	});
 
-	const { value: model } = useField<string>('model');
+	const { value: model, errorMessage: modelError } = useField<string>('model');
+	const { value: player } = useField<string>('player');
 
-	async function createVehicle(data: any[]) {
-		await rpc.callServer('Admin-CreateVehicle', data);
-		showNotification('success', 'ТС успешно создано');
-	}
+	const temporary = ref(false);
+
+	const vehicleOptions = Object.entries(vehiclesData as Record<string, string>).map(
+		([value, label]) => ({ value, label })
+	);
+
+	const onSubmit = handleSubmit(async () => {
+		await rpc.callServer('Admin-CreateVehicle', [model.value, player.value, temporary.value]);
+
+		showNotification('success', 'Транспорт создан');
+	});
 </script>
 
 <template>
-	<form @submit="handleSubmit((values: any) => createVehicle(Object.values(values)))">
-		<input
-			v-model="model"
-			class="admin_field"
-			type="text"
-			name="model"
-			placeholder="Модель"
-		/>
+	<form class="admin__form" @submit="onSubmit">
+		<div class="admin__field">
+			<label class="admin__label">Модель</label>
+			<InputText v-model="model" :invalid="!!modelError" placeholder="например: adder" />
+			<small v-if="modelError" class="admin__error">{{ modelError }}</small>
+		</div>
 
-		<Select
-			className="admin_select"
-			className-prefix="admin_select"
-			placeholder="Транспортное средство"
-			:options="Object.entries(vehiclesData).map(([value, label]) => ({
-				value,
-				label
-			}))"
-			:no-options-message="() => 'Не найдено'"
-			@change="(option: any) => setFieldValue('model', option?.value)"
-		/>
+		<div class="admin__field">
+			<label class="admin__label">Список транспорта</label>
+			<Select
+				v-model="model"
+				:options="vehicleOptions"
+				placeholder="Выберите из списка"
+			/>
+		</div>
 
-		<Players :on-change="(data: any) => setFieldValue('player', data.dbId)" />
+		<div class="admin__field">
+			<label class="admin__label">Владелец (для постоянного ТС)</label>
+			<Players @select="(p: any) => setFieldValue('player', p?.dbId)" />
+		</div>
 
-		<Checkbox name="temporary" label="Временное" />
+		<Checkbox v-model="temporary" label="Временное транспортное средство" />
 
-		<GradientButton type="submit">Создать</GradientButton>
+		<div class="admin__actions">
+			<Button type="submit" label="Создать" />
+		</div>
 	</form>
 </template>

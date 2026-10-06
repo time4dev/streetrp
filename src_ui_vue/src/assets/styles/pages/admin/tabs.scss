@@ -1,56 +1,84 @@
-.admin_tabs {
-	display: flex;
-	justify-content: space-between;
+// Sidebar navigation (PrimeVue Button) + inner PrimeVue Tabs
+.admin {
+	&__nav {
+		.p-button.admin__nav-item {
+			justify-content: flex-start;
+			gap: 0.9vw;
+			width: 100%;
+			padding: 1.2vh 1vw;
+			border-radius: 0.55vw;
+			color: rgba($white, 0.72);
+			font-size: 1.05vw;
+			font-weight: 200;
+			letter-spacing: 0.05vw;
+			text-transform: uppercase;
+			transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 
-	&-nav {
-		width: 22%;
+			svg {
+				width: 1.5vw;
+				height: 1.5vw;
+				flex: none;
+			}
+
+			&:hover {
+				background: rgba($white, 0.07);
+				color: $white;
+			}
+
+			&.is-active {
+				color: $white;
+				background: linear-gradient(90deg, rgba($purple, 0.85) 0%, rgba($purple, 0.2) 100%);
+				box-shadow: 0 0 1.4vw rgba($purple, 0.35);
+			}
+		}
 	}
 
-	&-nav-list {
-		position: relative;
-		padding-top: 2%;
-		margin-right: 5%;
-		height: 100vh;
-		background: linear-gradient(
-			180deg,
-			rgba($purple, $alpha: 0.5) 0%,
-			rgba($gray, $alpha: 0.5) 100%
-		);
+	.p-tabs {
+		background: transparent;
 	}
 
-	&-tab {
-		padding: 2% 8%;
-		font-size: 1.3vw;
-		font-weight: 300;
-		outline: none;
-		border-bottom: 0.1vh solid #000;
+	.p-tablist {
+		border-bottom: 0.1vh solid rgba($white, 0.1);
+		background: transparent;
+		gap: 0.4vw;
+	}
+
+	.p-tablist-tab-list {
+		background: transparent;
+		border: none;
+	}
+
+	.p-tab {
+		padding: 1.1vh 1.2vw;
+		color: rgba($white, 0.6);
+		font-size: 1vw;
 		font-weight: 200;
+		letter-spacing: 0.05vw;
 		text-transform: uppercase;
-		transition: opacity 0.2s ease;
+		background: transparent !important;
+		border: none !important;
+		transition: color 0.2s ease;
 
 		&:hover {
-			opacity: 0.5;
+			color: $white;
 		}
 
-		&-active {
-			opacity: 0.5;
-		}
-
-		&-btn {
-			outline: none;
+		&[data-p-active='true'] {
+			color: $white;
 		}
 	}
 
-	&-content-holder {
-		width: 72%;
-		background: linear-gradient(
-			180deg,
-			rgba($purple, $alpha: 0.4) 0%,
-			rgba($gray, $alpha: 0.5) 100%
-		);
+	.p-tablist-active-bar {
+		background: $purple;
+		height: 0.25vh;
 	}
 
-	&-tabpane {
+	.p-tabpanels {
+		background: transparent;
+		padding: 2vh 0 0;
+	}
+
+	.p-tabpanel {
 		outline: none;
 	}
 }

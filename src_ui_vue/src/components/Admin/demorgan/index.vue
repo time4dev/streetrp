@@ -1,64 +1,80 @@
 <script setup lang="ts">
-	import { useForm, useField } from 'vee-validate';
+	import { ref } from 'vue';
+	import { useField, useForm } from 'vee-validate';
 	import * as yup from 'yup';
-	import { showNotification } from '@/utils/notifications';
+	import InputText from 'primevue/inputtext';
+	import Button from 'primevue/button';
 	import rpc from '@/utils/rpc';
-	import GradientButton from '@/components/Common/gradient-button.vue';
+	import { showNotification } from '@/utils/notifications';
 	import Players from '../partials/players.vue';
 	import DatePicker from '../partials/date-picker.vue';
+	import Checkbox from '../partials/checkbox.vue';
 
 	const { handleSubmit, setFieldValue } = useForm({
-		initialValues: { reason: '', term: '', player: '' },
+		initialValues: { player: '', reason: '', term: '' },
 		validationSchema: yup.object({
-			reason: yup.string().min(1).max(1000),
-			term: yup.date(),
-			player: yup.string().required()
+			player: yup.string().required('Выберите игрока')
 		})
 	});
 
+	const { value: player, errorMessage: playerError } = useField<string>('player');
 	const { value: reason } = useField<string>('reason');
 	const { value: term } = useField<string>('term');
 
-	async function setPlayerDemorgan(player: string, term?: string | null, reason?: string) {
-		try {
-			const isRelease = !term;
+	const isRelease = ref(false);
 
-			await rpc.callServer(
-				isRelease ? 'Admin-ReleaseDemorgan' : 'Admin-ToDemorgan',
-				isRelease ? player : [player, term, reason]
-			);
+	const onSubmit = handleSubmit(async () => {
+		if (isRelease.value) {
+			await rpc.callServer('Admin-ReleaseDemorgan', player.value);
 
-			showNotification(
-				'success',
-				isRelease ? 'Игрок освобожден' : 'Игрок заключен в деморган'
-			);
-		} catch (err: any) {
-			if (err.msg) showNotification('error', err.msg);
+			showNotification('success', 'Игрок освобождён');
+			return;
 		}
-	}
 
-	const onSubmit = handleSubmit(({ player, term, reason }: any) =>
-		setPlayerDemorgan(player, term, reason)
-	);
+		if (!term.value) {
+			showNotification('error', 'Укажите срок заключения');
+			return;
+		}
+
+		await rpc.callServer('Admin-ToDemorgan', [player.value, term.value, reason.value]);
+
+		showNotification('success', 'Игрок заключён в деморган');
+	});
 </script>
 
 <template>
-	<div class="admin_demorgan">
-		<form @submit="onSubmit">
-			<input
-				v-model="reason"
-				class="admin_field"
-				type="text"
-				name="reason"
-				placeholder="причина"
-			/>
+	<div class="admin__pane">
+		<h3 class="admin__pane-title">Деморган</h3>
+		<p class="admin__pane-hint">Поместить игрока в деморган или освободить его</p>
 
-			<DatePicker name="term" placeholder="Срок" />
-			<Players :on-change="(data: any) => setFieldValue('player', data.dbId)" />
+		<form class="admin__form" @submit="onSubmit">
+			<div class="admin__field">
+				<label class="admin__label">Игрок</label>
+				<Players :invalid="!!playerError" @select="(p: any) => setFieldValue('player', p?.dbId)" />
+				<small v-if="playerError" class="admin__error">{{ playerError }}</small>
+			</div>
 
-			<GradientButton type="submit">
-				{{ term ? 'Посадить' : 'Освободить' }}
-			</GradientButton>
+			<Checkbox v-model="isRelease" label="Освободить игрока" />
+
+			<template v-if="!isRelease">
+				<div class="admin__field">
+					<label class="admin__label">Срок</label>
+					<DatePicker v-model="term" placeholder="Дата и время освобождения" />
+				</div>
+
+				<div class="admin__field">
+					<label class="admin__label">Причина</label>
+					<InputText v-model="reason" placeholder="причина" />
+				</div>
+			</template>
+
+			<div class="admin__actions">
+				<Button
+					type="submit"
+					:label="isRelease ? 'Освободить' : 'Посадить'"
+					:severity="isRelease ? 'success' : 'danger'"
+				/>
+			</div>
 		</form>
 	</div>
 </template>

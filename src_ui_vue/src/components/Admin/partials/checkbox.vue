@@ -1,25 +1,29 @@
 <script setup lang="ts">
-	import { useField } from 'vee-validate';
-	import RcCheckbox from '@/components/Common/rc-checkbox.vue';
+	import Checkbox from 'primevue/checkbox';
 
-	const props = defineProps<{
-		label: string;
-		name: string;
-	}>();
+	withDefaults(
+		defineProps<{
+			modelValue: boolean;
+			label?: string;
+			invalid?: boolean;
+		}>(),
+		{
+			label: '',
+			invalid: false
+		}
+	);
 
-	// legacy: const [field] = useField({...props}) passed to rc-checkbox
-	const { value, setValue } = useField<boolean>(props.name);
+	const emit = defineEmits<{ 'update:modelValue': [value: boolean] }>();
 </script>
 
 <template>
-	<label class="admin_checkbox">
-		<RcCheckbox
-			className="admin-check"
-			:checked="!!value"
-			:name="props.name"
-			@change="(checked: boolean) => setValue(checked)"
+	<label class="admin__inline">
+		<Checkbox
+			:model-value="modelValue"
+			binary
+			:invalid="invalid"
+			@update:model-value="emit('update:modelValue', !!$event)"
 		/>
-
-		{{ label }}
+		<span v-if="label" class="p-checkbox-label">{{ label }}</span>
 	</label>
 </template>

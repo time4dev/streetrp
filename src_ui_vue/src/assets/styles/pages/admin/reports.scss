@@ -1,49 +1,97 @@
-.admin_reports {
-	&-list {
-		height: 100vh;
-		overflow-y: scroll;
-
-		&::-webkit-scrollbar {
-			width: 0.4vw;
-		}
-		&::-webkit-scrollbar-track {
-			border: none;
-			background: transparent;
-		}
-		&::-webkit-scrollbar-thumb {
-			background: $white;
-		}
+// Data tables for reports & journal, plus the log rows.
+.admin {
+	.p-datatable {
+		background: transparent;
 	}
 
-	&-item {
-		position: relative;
-		padding: 1% 2%;
-		padding-right: 6%;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		border-bottom: 0.1vh solid $gray;
-		font-weight: 200;
+	.p-datatable-table-container {
+		background: transparent;
 	}
 
-	&-message {
-		margin: 0;
-		width: 50%;
-		text-align: center;
+	.p-datatable-table {
+		border-collapse: collapse;
 	}
 
-	&-accept {
-		position: absolute;
-		right: 1%;
+	.p-datatable-header,
+	.p-datatable-footer {
+		background: transparent;
+		border: none;
+		padding: 0 0 1vh;
+	}
+
+	.p-datatable-thead > tr > th {
+		background: rgba($white, 0.05);
+		color: rgba($white, 0.7);
+		border: none;
+		border-bottom: 0.1vh solid rgba($white, 0.12);
+		padding: 1.2vh 1vw;
+		font-size: 0.95vw;
+		font-weight: 300;
+		letter-spacing: 0.05vw;
+		text-transform: uppercase;
+		text-align: left;
+	}
+
+	.p-datatable-tbody > tr {
+		background: transparent;
+		color: rgba($white, 0.9);
+		transition: background 0.15s ease;
 
 		&:hover {
-			opacity: 0.5;
+			background: rgba($white, 0.04);
 		}
+	}
 
-		svg {
-			fill: $yellow;
-			width: 2vw;
-			height: 2vw;
+	.p-datatable-tbody > tr > td {
+		border: none;
+		border-bottom: 0.1vh solid rgba($white, 0.07);
+		padding: 1.1vh 1vw;
+		font-size: 1vw;
+		font-weight: 200;
+		vertical-align: middle;
+	}
+
+	.p-datatable-emptymessage > td {
+		color: rgba($white, 0.45);
+		text-align: center;
+		padding: 4vh 0;
+	}
+
+	.p-paginator {
+		background: transparent;
+		border: none;
+		padding: 1.5vh 0 0;
+
+		.p-paginator-page,
+		.p-paginator-next,
+		.p-paginator-prev,
+		.p-paginator-first,
+		.p-paginator-last {
+			color: rgba($white, 0.7);
+			background: transparent;
+			border-radius: 0.4vw;
+			min-width: 2.2vw;
+			height: 2.2vw;
+
+			&.p-paginator-page-selected {
+				background: rgba($purple, 0.6);
+				color: $white;
+			}
+
+			&:not(.p-disabled):hover {
+				background: rgba($white, 0.08);
+			}
 		}
+	}
+
+	&__report-message {
+		width: 55%;
+		white-space: normal;
+		word-break: break-word;
+	}
+
+	&__report-time {
+		white-space: nowrap;
+		opacity: 0.7;
 	}
 }

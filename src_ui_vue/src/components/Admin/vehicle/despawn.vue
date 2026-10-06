@@ -1,9 +1,10 @@
 <script setup lang="ts">
-	import { useForm, useField } from 'vee-validate';
+	import { useField, useForm } from 'vee-validate';
 	import * as yup from 'yup';
+	import InputText from 'primevue/inputtext';
+	import Button from 'primevue/button';
 	import rpc from '@/utils/rpc';
 	import { showNotification } from '@/utils/notifications';
-	import GradientButton from '@/components/Common/gradient-button.vue';
 
 	const { handleSubmit } = useForm({
 		initialValues: { govNumber: '' },
@@ -14,24 +15,22 @@
 
 	const { value: govNumber } = useField<string>('govNumber');
 
-	async function despawnVehicle(govNumber?: string) {
-		await rpc.callServer('Admin-DespawnVehicle', govNumber);
-		showNotification('success', 'ТС успешно эвакуировано');
-	}
+	const onSubmit = handleSubmit(async (values: any) => {
+		await rpc.callServer('Admin-DespawnVehicle', values.govNumber);
 
-	const onSubmit = handleSubmit((values: any) => despawnVehicle(values.govNumber));
+		showNotification('success', 'Транспорт эвакуирован');
+	});
 </script>
 
 <template>
-	<form @submit="onSubmit">
-		<input
-			v-model="govNumber"
-			class="admin_field"
-			type="text"
-			name="govNumber"
-			placeholder="гос. номер"
-		/>
+	<form class="admin__form" @submit="onSubmit">
+		<div class="admin__field">
+			<label class="admin__label">Гос. номер</label>
+			<InputText v-model="govNumber" placeholder="Оставьте пустым для ТС под прицелом" />
+		</div>
 
-		<GradientButton type="submit">Эвакуировать</GradientButton>
+		<div class="admin__actions">
+			<Button type="submit" label="Эвакуировать" severity="danger" />
+		</div>
 	</form>
 </template>

@@ -10,6 +10,7 @@ import './vehicle';
 import './house';
 import './demorgan';
 import './faction';
+import './licenses';
 
 class Admin {
 	constructor() {

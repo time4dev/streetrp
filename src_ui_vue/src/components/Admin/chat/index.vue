@@ -1,35 +1,48 @@
 <script setup lang="ts">
-	import { useForm, useField } from 'vee-validate';
+	import { useField, useForm } from 'vee-validate';
 	import * as yup from 'yup';
+	import Textarea from 'primevue/textarea';
+	import Button from 'primevue/button';
 	import rpc from '@/utils/rpc';
-	import GradientButton from '@/components/Common/gradient-button.vue';
+	import { showNotification } from '@/utils/notifications';
 
 	const { handleSubmit } = useForm({
 		initialValues: { message: '' },
 		validationSchema: yup.object({
-			message: yup.string().required().min(4).max(1000)
+			message: yup.string().required('Введите сообщение').min(4).max(1000)
 		})
 	});
 
-	const { value: message } = useField<string>('message');
+	const { value: message, errorMessage: messageError } = useField<string>('message');
 
-	const onSubmit = handleSubmit((values: any) =>
-		rpc.callServer('Admin-SendToChat', values.message)
-	);
+	const onSubmit = handleSubmit(async (values: any) => {
+		await rpc.callServer('Admin-SendToChat', values.message);
+
+		showNotification('success', 'Сообщение отправлено');
+	});
 </script>
 
 <template>
-	<div class="admin_chat">
-		<form @submit="onSubmit">
-			<input
-				v-model="message"
-				class="admin_field"
-				type="text"
-				name="message"
-				placeholder="сообщение в чат"
-			/>
+	<div class="admin__pane">
+		<h3 class="admin__pane-title">Уведомление в чат</h3>
+		<p class="admin__pane-hint">Отправить системное сообщение всем игрокам сервера</p>
 
-			<GradientButton type="submit">Отправить</GradientButton>
+		<form class="admin__form" @submit="onSubmit">
+			<div class="admin__field">
+				<label class="admin__label">Сообщение</label>
+				<Textarea
+					v-model="message"
+					:invalid="!!messageError"
+					rows="4"
+					auto-resize
+					placeholder="Текст сообщения"
+				/>
+				<small v-if="messageError" class="admin__error">{{ messageError }}</small>
+			</div>
+
+			<div class="admin__actions">
+				<Button type="submit" label="Отправить" />
+			</div>
 		</form>
 	</div>
 </template>

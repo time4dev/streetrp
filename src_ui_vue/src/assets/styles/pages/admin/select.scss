@@ -1,107 +1,211 @@
-div.admin_select {
-	margin-bottom: 1%;
-	font-size: 1.2vw;
-	color: #fff;
+// PrimeVue controls, tuned for the dark admin theme.
+// Specificity is raised (`.admin ...` / `body ...`) to win over the global
+// form resets in `app.scss` and Framework7.
 
-	&__control {
-		padding: 0.5% 4%;
-		border: 1px solid $black;
-		border-radius: 0px;
-		background: transparent;
-		outline: none;
+.admin {
+	// --- text-like inputs ------------------------------------------------
+	input.p-inputtext,
+	input.p-inputnumber-input,
+	input.p-datepicker-input,
+	textarea.p-textarea {
+		width: 100%;
+		background: #101016 !important;
+		color: $white !important;
+		border: 0.1vh solid rgba($white, 0.16) !important;
+		border-radius: 0.45vw !important;
+		padding: 1vh 0.9vw !important;
+		font-family: inherit !important;
+		font-size: 1vw;
 		font-weight: 200;
-		text-align: center;
+		box-shadow: none !important;
+		transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
-		&--is-focused {
-			border: 1px solid $black;
-			box-shadow: none;
-		}
-
-		&:hover {
-			border: 1px solid $black;
-		}
-	}
-
-	&__value-container {
-		padding: 0;
-	}
-
-	&__single-value,
-	&__placeholder,
-	&__indicator {
-		color: currentColor;
-	}
-
-	&__placeholder {
-		text-transform: uppercase;
-	}
-
-	&__indicators {
-		display: none;
-	}
-
-	&__placeholder,
-	&__single-value {
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-
-	&__menu {
-		margin: 0;
-		background: linear-gradient(180deg, $purple 0%, $gray 100%);
-		border-radius: 0;
-
-		::-webkit-scrollbar {
-			width: 0;
-			background: transparent;
-		}
-
-		&-list {
-			padding: 0;
-			max-height: 50vh;
-		}
-
-		&-notice {
-			color: $white;
+		&::placeholder {
+			color: rgba($white, 0.4);
 			text-transform: uppercase;
-			font-weight: 200;
+		}
+
+		&:enabled:hover {
+			border-color: rgba($white, 0.32) !important;
+		}
+
+		&:enabled:focus {
+			border-color: $purple !important;
+			box-shadow: 0 0 0 0.15vw rgba($purple, 0.35) !important;
 		}
 	}
 
-	&__option {
-		margin-top: -1px;
-		border: 0.1vh solid $black;
-		color: #fff;
-		font-size: 1.2vw;
+	textarea.p-textarea {
+		resize: vertical;
+		min-height: 8vh;
+	}
+
+	.p-inputnumber,
+	.p-datepicker,
+	.p-select,
+	.p-inputtext {
+		width: 100%;
+	}
+
+	.p-select {
+		background: #101016;
+		border: 0.1vh solid rgba($white, 0.16);
+		border-radius: 0.45vw;
+		color: $white;
+		font-size: 1vw;
 		font-weight: 200;
 
-		&--is-focused {
-			background: transparent;
+		&:not(.p-disabled):hover {
+			border-color: rgba($white, 0.32);
 		}
 
-		&--is-selected {
-			background: transparent;
+		&.p-focus {
+			border-color: $purple;
+			box-shadow: 0 0 0 0.15vw rgba($purple, 0.35);
 		}
 
-		&:hover {
-			opacity: 0.5;
+		.p-select-label {
+			color: $white;
+			padding: 1vh 0.9vw;
+			font-family: inherit;
+
+			&.p-placeholder {
+				color: rgba($white, 0.4);
+				text-transform: uppercase;
+			}
+		}
+
+		.p-select-dropdown {
+			color: rgba($white, 0.55);
+			width: 2.4vw;
+		}
+
+		.p-select-clear-icon {
+			color: rgba($white, 0.55);
 		}
 	}
 
-	&__input {
-		color: #fff;
-		text-align: center;
+	// --- checkbox ---------------------------------------------------------
+	.p-checkbox {
+		width: 1.3vw;
+		height: 1.3vw;
 
-		input {
-			font-weight: 200;
+		.p-checkbox-box {
+			width: 1.3vw;
+			height: 1.3vw;
+			background: #101016;
+			border: 0.1vh solid rgba($white, 0.25);
+			border-radius: 0.25vw;
+
+			&.p-checkbox-checked {
+				background: $purple;
+				border-color: $purple;
+			}
+
+			svg {
+				width: 0.9vw;
+				height: 0.9vw;
+			}
 		}
 	}
 
-	&__indicator-separator {
-		display: none;
+	.p-checkbox-label {
+		margin-left: 0.7vw;
+		font-weight: 200;
+		opacity: 0.85;
 	}
 
-	&__indicator {
-		color: #eee;
+	// --- buttons ----------------------------------------------------------
+	.p-button {
+		font-family: inherit;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: 0.05vw;
+
+		&.p-button-sm {
+			font-size: 0.9vw;
+		}
+	}
+}
+
+// --- teleported overlays (Select / DatePicker) -------------------------------
+body {
+	.p-select-overlay,
+	.p-datepicker-panel {
+		background: #15151c;
+		border: 0.1vh solid rgba($white, 0.14);
+		border-radius: 0.5vw;
+		color: $white;
+		box-shadow: 0 1vw 3vw rgba(#000, 0.5);
+	}
+
+	.p-select-header,
+	.p-datepicker-header {
+		background: rgba($white, 0.04);
+		border-color: rgba($white, 0.1);
+		color: $white;
+	}
+
+	.p-select-filter {
+		width: 100%;
+		background: #101016 !important;
+		color: $white !important;
+		border: 0.1vh solid rgba($white, 0.16) !important;
+		border-radius: 0.4vw !important;
+		padding: 0.9vh 0.8vw !important;
+	}
+
+	.p-select-list {
+		background: transparent;
+	}
+
+	.p-select-option,
+	.p-select-empty-message {
+		color: rgba($white, 0.85);
+		font-weight: 200;
+		font-size: 1vw;
+
+		&.p-focus,
+		&[aria-selected='true'] {
+			background: rgba($purple, 0.4);
+			color: $white;
+		}
+	}
+
+	.p-datepicker-header {
+		color: $white;
+	}
+
+	.p-datepicker-title,
+	.p-datepicker-select-month,
+	.p-datepicker-select-year {
+		color: $white;
+		font-weight: 300;
+	}
+
+	.p-datepicker-day-view .p-datepicker-day,
+	.p-datepicker-weekday,
+	.p-datepicker-time-picker span {
+		color: rgba($white, 0.85);
+	}
+
+	.p-datepicker-day:not(.p-disabled):hover,
+	.p-datepicker-select-month:hover,
+	.p-datepicker-select-year:hover {
+		background: rgba($white, 0.1);
+	}
+
+	.p-datepicker-day-selected,
+	.p-datepicker-day-selected-range {
+		background: $purple;
+		color: $white;
+	}
+
+	.p-datepicker-today > .p-datepicker-day {
+		background: rgba($purple, 0.25);
+	}
+
+	.p-datepicker-time-picker {
+		border-color: rgba($white, 0.1);
 	}
 }

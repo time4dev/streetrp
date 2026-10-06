@@ -1,18 +1,21 @@
 <script setup lang="ts">
+	import Button from 'primevue/button';
 	import rpc from '@/utils/rpc';
 	import { showNotification } from '@/utils/notifications';
-	import GradientButton from '@/components/Common/gradient-button.vue';
 
 	async function startWar() {
 		await rpc.callServer('Admin-StartFortWar');
-		showNotification('success', 'Вы активировали ивент');
+
+		showNotification('success', 'Ивент активирован');
 	}
 </script>
 
 <template>
-	<div class="admin_tab-container">
-		<GradientButton type="submit" @click="startWar">
-			Начать "Нападение на ФЗ"
-		</GradientButton>
+	<div class="admin__form">
+		<p class="admin__pane-hint">Запустить ивент «Нападение на ФЗ»</p>
+
+		<div class="admin__actions">
+			<Button label="Начать «Нападение на ФЗ»" severity="warn" @click="startWar" />
+		</div>
 	</div>
 </template>

@@ -1,37 +1,37 @@
 <script setup lang="ts">
-	import { useForm, useField } from 'vee-validate';
+	import { useField, useForm } from 'vee-validate';
 	import * as yup from 'yup';
+	import InputNumber from 'primevue/inputnumber';
+	import Button from 'primevue/button';
 	import rpc from '@/utils/rpc';
 	import { showNotification } from '@/utils/notifications';
-	import GradientButton from '@/components/Common/gradient-button.vue';
 
 	const { handleSubmit } = useForm({
-		initialValues: { index: '' },
+		initialValues: { index: 0 },
 		validationSchema: yup.object({
-			index: yup.number().required()
+			index: yup.number().required('Укажите номер дома').min(1)
 		})
 	});
 
-	const { value: index } = useField<number | string>('index');
+	const { value: index, errorMessage: indexError } = useField<number>('index');
 
-	async function destroyHouse(index: number) {
-		await rpc.callServer('Admin-DeleteHouse', index);
-		showNotification('success', 'Дом успешно уничтожен');
-	}
+	const onSubmit = handleSubmit(async (values: any) => {
+		await rpc.callServer('Admin-DeleteHouse', Number(values.index));
 
-	const onSubmit = handleSubmit((values: any) => destroyHouse(+values.index));
+		showNotification('success', 'Дом снесён');
+	});
 </script>
 
 <template>
-	<form @submit="onSubmit">
-		<input
-			v-model="index"
-			class="admin_field"
-			type="number"
-			name="index"
-			placeholder="номер дома"
-		/>
+	<form class="admin__form" @submit="onSubmit">
+		<div class="admin__field">
+			<label class="admin__label">Номер дома</label>
+			<InputNumber v-model="index" :invalid="!!indexError" :min="1" show-buttons />
+			<small v-if="indexError" class="admin__error">{{ indexError }}</small>
+		</div>
 
-		<GradientButton type="submit">Снести</GradientButton>
+		<div class="admin__actions">
+			<Button type="submit" label="Снести" severity="danger" />
+		</div>
 	</form>
 </template>

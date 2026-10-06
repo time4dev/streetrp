@@ -1,7 +1,7 @@
 import moment from 'moment';
 import CharModel from 'models/Character';
 
-const expirationDays = {
+export const expirationDays = {
 	car: 30,
 	motorcycle: 30,
 	boat: 30,
@@ -14,7 +14,7 @@ const expirationDays = {
 	military: 10000
 };
 
-type License = keyof typeof expirationDays;
+export type License = keyof typeof expirationDays;
 
 class PlayerLicenses {
 	hasLicense(player: Player, license: License) {
