@@ -1,28 +1,32 @@
 {
-	"name": "streetrp-server",
+	"name": "streetrp",
 	"version": "0.1.0",
 	"author": "nicro + Harland [KFC]",
 	"homepage": "https://ragemp.pro",
 	"license": "MIT",
 	"private": true,
 	"scripts": {
-		"postinstall": "pnpm run install:client && pnpm run install:server && pnpm run install:ui",
-		"install:client": "cd src_client && pnpm install",
-		"install:server": "cd src_server && pnpm install",
-		"install:ui": "cd src_ui && pnpm install",
+		"install:client": "pnpm --filter streetrp-client install",
+		"install:server": "pnpm --filter streetrp-server install",
+		"install:ui": "pnpm --filter streetrp-ui-vue install",
 		"build": "pnpm run build:ui && pnpm run build:client && pnpm run build:server",
-		"build:ui": "cd src_ui && pnpm run build",
-		"build:client": "cd src_client && pnpm run build",
-		"build:server": "cd src_server && pnpm run build",
+		"build:ui": "pnpm --filter streetrp-ui-vue run build",
+		"build:client": "pnpm --filter streetrp-client run build",
+		"build:server": "pnpm --filter streetrp-server run build",
 		"postbuild": "echo ✔ All Build success!"
 	},
 	"packageManager": "pnpm@10.33.2",
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild",
+			"vue-demi",
+			"mongodb-client-encryption"
+		]
+	},
 	"dependencies": {
-		"@babel/runtime": "^7.14.5",
 		"axios": "^0.21.1",
 		"bcryptjs": "^2.4.3",
 		"chalk": "^4.1.1",
-		"cross-env": "^7.0.3",
 		"crypto-random-string": "^4.0.0",
 		"dotenv": "^10.0.0",
 		"express": "^4.17.1",
@@ -31,9 +35,11 @@
 		"moment": "^2.29.1",
 		"mongodb-client-encryption": "^2.3.0",
 		"mongoose": "^5.12.13",
-		"nodemailer": "^6.6.1",
 		"rage-rpc": "github:Yoegibby/rage-rpc#rage1.1_fixes",
 		"source-map-support": "^0.5.19",
 		"winston": "^3.3.3"
+	},
+	"devDependencies": {
+		"esbuild": "^0.28.2"
 	}
 }

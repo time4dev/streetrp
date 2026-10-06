@@ -1,0 +1,4 @@
+packages:
+  - src_client
+  - src_server
+  - src_ui_vue

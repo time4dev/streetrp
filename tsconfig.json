@@ -9,6 +9,5 @@
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
 		"isolatedModules": true
-	},
-	"exclude": ["src_ui"]
+	}
 }
