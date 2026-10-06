@@ -3,6 +3,7 @@
 	import { useForm } from 'vee-validate';
 	import * as yup from 'yup';
 	import rpc from '@/utils/rpc';
+	import { saveCredentials } from '@/utils/auth-storage';
 	import { showNotification } from '@/utils/notifications';
 	import GradientButton from '@/components/Common/gradient-button.vue';
 	import OutlineButton from '@/components/Common/outline-button.vue';
@@ -60,6 +61,8 @@
 		try {
 			await rpc.callServer('Auth-SignUp', data);
 			await rpc.callClient('Auth-SuccessRegister', data.email);
+
+			saveCredentials(data.email, data.password);
 
 			props.setEmail(data.email);
 			props.toLogin();

@@ -3,6 +3,7 @@
 	import { useForm } from 'vee-validate';
 	import * as yup from 'yup';
 	import rpc from '@/utils/rpc';
+	import { saveCredentials } from '@/utils/auth-storage';
 	import { showNotification } from '@/utils/notifications';
 	import GradientButton from '@/components/Common/gradient-button.vue';
 	import OutlineButton from '@/components/Common/outline-button.vue';
@@ -44,6 +45,8 @@
 
 		try {
 			await rpc.callServer('Auth-ResetPassword', data);
+
+			saveCredentials(data.email, data.password);
 
 			props.toLogin();
 		} catch (err: any) {

@@ -2,6 +2,7 @@
 	import { useForm } from 'vee-validate';
 	import * as yup from 'yup';
 	import rpc from '@/utils/rpc';
+	import { loadCredentials, saveCredentials } from '@/utils/auth-storage';
 	import GradientButton from '@/components/Common/gradient-button.vue';
 	import PrimaryTitle from '@/components/Common/primary-title.vue';
 	import Field from './field.vue';
@@ -12,8 +13,13 @@
 		email?: string;
 	}>();
 
+	const saved = loadCredentials();
+
 	const { handleSubmit, setFieldError } = useForm({
-		initialValues: { email: props.email ?? '', password: '' },
+		initialValues: {
+			email: props.email || saved?.email || '',
+			password: saved?.password || ''
+		},
 		validationSchema: yup.object({
 			email: yup.string().email('Некорректный e-mail').required('Заполните поле'),
 			password: yup.string().required('Заполните поле')
@@ -23,9 +29,13 @@
 	const onSubmit = handleSubmit((values: any) => {
 		rpc
 			.callServer('Auth-SignIn', Object.values(values))
-			.then(() => rpc.callClient('Auth-SuccessLogin', values.email))
+			.then(() => {
+				saveCredentials(values.email, values.password);
+				return rpc.callClient('Auth-SuccessLogin', values.email);
+			})
 			.catch((err: any) => {
 				if (err.confirm) {
+					saveCredentials(values.email, values.password);
 					props.setEmail(values.email);
 					return props.openForm('confirm');
 				}
