@@ -16,7 +16,8 @@ export default defineConfig({
 		}
 	},
 	build: {
-		outDir: 'build',
+		outDir: '../client_packages/cef',
+		emptyOutDir: true,
 		sourcemap: false,
 		chunkSizeWarningLimit: 4096
 	},

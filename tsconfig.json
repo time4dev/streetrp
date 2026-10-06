@@ -1,7 +1,10 @@
 {
 	"compilerOptions": {
 		"target": "esnext",
-		"lib": ["esnext", "es2019"],
+		"lib": [
+			"esnext",
+			"es2019"
+		],
 		"moduleResolution": "node",
 		"module": "esnext",
 		"resolveJsonModule": true,
