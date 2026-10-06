@@ -7,11 +7,11 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"predev": "node scripts/generate-icons.mjs && node scripts/build-framework7-styles.mjs",
+		"predev": "node scripts/build-framework7-styles.mjs",
 		"dev": "vite",
-		"pregenerate": "node scripts/generate-icons.mjs && node scripts/build-framework7-styles.mjs",
+		"pregenerate": "node scripts/build-framework7-styles.mjs",
 		"generate": "echo generated",
-		"prebuild": "node scripts/generate-icons.mjs && node scripts/build-framework7-styles.mjs",
+		"prebuild": "node scripts/build-framework7-styles.mjs",
 		"build": "vue-tsc --noEmit && vite build",
 		"typecheck": "vue-tsc --noEmit",
 		"preview": "vite preview"
@@ -39,11 +39,5 @@
 		"typescript": "~5.8.3",
 		"vite": "^8.3.2",
 		"vue-tsc": "^3.0.0"
-	},
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"esbuild",
-			"vue-demi"
-		]
 	}
 }
