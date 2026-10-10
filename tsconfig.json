@@ -5,8 +5,8 @@
 			"esnext",
 			"es2019"
 		],
-		"moduleResolution": "node",
-		"module": "esnext",
+		"module": "preserve",
+		"moduleResolution": "bundler",
 		"resolveJsonModule": true,
 		"esModuleInterop": true,
 		"skipLibCheck": true,
