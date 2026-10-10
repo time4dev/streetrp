@@ -1,7 +1,15 @@
 {
 	"extends": "../tsconfig.json",
 	"compilerOptions": {
-		"typeRoots": ["./node_modules/@types/", "./typings/"],
-		"baseUrl": "./src"
+		"moduleResolution": "bundler",
+		"typeRoots": [
+			"./node_modules/@types/",
+			"./typings/"
+		],
+		"paths": {
+			"*": [
+				"./src/*"
+			]
+		}
 	}
 }

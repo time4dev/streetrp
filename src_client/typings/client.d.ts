@@ -1,11 +1,17 @@
+/// <reference types="@types/ragemp-c" />
+
+declare const mp: MpCustom;
+
 type PositionEx = {
 	x: number;
 	y: number;
 	z: number;
 };
 
-interface Mp {
+interface MpCustom extends Mp {
 	game1: Mp['game'];
+	attachments: AttachmentsMp;
+	animations: AnimationsMp;
 }
 
 interface EventMpPool {
@@ -147,11 +153,6 @@ interface AnimationsMp {
 
 interface GameUiMp {
 	notifications: NotificationMp;
-}
-
-interface Mp {
-	attachments: AttachmentsMp;
-	animations: AnimationsMp;
 }
 
 interface ColshapeHandlers {
