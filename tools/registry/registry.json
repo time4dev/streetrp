@@ -1,0 +1,6971 @@
+{
+	"generatedAt": "2026-10-30T12:57:54.227Z",
+	"counts": {
+		"files": 680,
+		"entries": 771,
+		"serverRpc": 216,
+		"serverRaw": 20,
+		"clientRpc": 141,
+		"clientRaw": 16,
+		"uiRpc": 31,
+		"uiToServer": 119,
+		"uiToClient": 66,
+		"clientToServer": 72,
+		"clientToServerRaw": 9,
+		"clientToUi": 16,
+		"serverToClient": 12,
+		"serverToClientRaw": 11
+	},
+	"missing": {
+		"UI → сервер": [],
+		"UI → клиент": [],
+		"клиент → сервер": [
+			"playerWeaponShot"
+		],
+		"клиент → UI": [],
+		"сервер → клиент": [
+			"VehicleSync-SetDirtLevel"
+		]
+	},
+	"entries": [
+		{
+			"name": "Admin-Ban",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/ban.ts",
+			"line": 16
+		},
+		{
+			"name": "Admin-Unban",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/ban.ts",
+			"line": 16
+		},
+		{
+			"name": "Admin-ToDemorgan",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/demorgan.ts",
+			"line": 9
+		},
+		{
+			"name": "Admin-ReleaseDemorgan",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/demorgan.ts",
+			"line": 9
+		},
+		{
+			"name": "Admin-SetFactionLeader",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/faction.ts",
+			"line": 8
+		},
+		{
+			"name": "Admin-StartFortWar",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/faction.ts",
+			"line": 8
+		},
+		{
+			"name": "Admin-SetZoneOwner",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/faction.ts",
+			"line": 8
+		},
+		{
+			"name": "Admin-CreateHouse",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/house.ts",
+			"line": 7
+		},
+		{
+			"name": "Admin-DeleteHouse",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/house.ts",
+			"line": 7
+		},
+		{
+			"name": "Admin-GetPlayers",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/index.ts",
+			"line": 162
+		},
+		{
+			"name": "Admin-Kick",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/index.ts",
+			"line": 162
+		},
+		{
+			"name": "Admin-Teleport",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/index.ts",
+			"line": 162
+		},
+		{
+			"name": "Admin-ChangeSkin",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/index.ts",
+			"line": 162
+		},
+		{
+			"name": "Admin-ChangeMoney",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/index.ts",
+			"line": 162
+		},
+		{
+			"name": "Admin-Spectate",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/index.ts",
+			"line": 162
+		},
+		{
+			"name": "Admin-SendToChat",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/index.ts",
+			"line": 162
+		},
+		{
+			"name": "Admin-GetJournal",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/journal.ts",
+			"line": 7
+		},
+		{
+			"name": "Admin-GiveLicense",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/licenses.ts",
+			"line": 7
+		},
+		{
+			"name": "Admin-WithdrawLicense",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/licenses.ts",
+			"line": 7
+		},
+		{
+			"name": "Admin-GetPlayerLicenses",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/licenses.ts",
+			"line": 7
+		},
+		{
+			"name": "Admin-SendReport",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/report.ts",
+			"line": 9
+		},
+		{
+			"name": "Admin-AcceptReport",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/report.ts",
+			"line": 9
+		},
+		{
+			"name": "Admin-GetReports",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/report.ts",
+			"line": 9
+		},
+		{
+			"name": "Admin-CreateVehicle",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/vehicle.ts",
+			"line": 8
+		},
+		{
+			"name": "Admin-DespawnVehicle",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/admin/vehicle.ts",
+			"line": 8
+		},
+		{
+			"name": "Auth-SignIn",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/auth/login.ts",
+			"line": 12
+		},
+		{
+			"name": "Auth-SignInWithCode",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/auth/login.ts",
+			"line": 12
+		},
+		{
+			"name": "playerReady",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/auth/login.ts",
+			"line": 20
+		},
+		{
+			"name": "Auth-SignUp",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/auth/register.ts",
+			"line": 18
+		},
+		{
+			"name": "Auth-GetRegisterCode",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/auth/register.ts",
+			"line": 18
+		},
+		{
+			"name": "Auth-ResetPassword",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/auth/reset.ts",
+			"line": 13
+		},
+		{
+			"name": "Auth-GetResetCode",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/auth/reset.ts",
+			"line": 13
+		},
+		{
+			"name": "Daily-GetAward",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/awards/daily.ts",
+			"line": 16
+		},
+		{
+			"name": "Daily-GetData",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/awards/daily.ts",
+			"line": 16
+		},
+		{
+			"name": "Referral-UseCode",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/awards/referral.ts",
+			"line": 14
+		},
+		{
+			"name": "Referral-GetInfo",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/awards/referral.ts",
+			"line": 14
+		},
+		{
+			"name": "AntiCheat-SendReport",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/basic/anti-cheat.ts",
+			"line": 8
+		},
+		{
+			"name": "playerChat",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/basic/chat/index.ts",
+			"line": 9
+		},
+		{
+			"name": "Doors-GetState",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/basic/doors.ts",
+			"line": 7
+		},
+		{
+			"name": "Doors-Toggle",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/basic/doors.ts",
+			"line": 13
+		},
+		{
+			"name": "doorChangeState",
+			"side": "server",
+			"kind": "call",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_server/src/basic/doors.ts",
+			"line": 21
+		},
+		{
+			"name": "Voice-AddListener",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/basic/voice.ts",
+			"line": 3
+		},
+		{
+			"name": "Voice-RemoveListener",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/basic/voice.ts",
+			"line": 3
+		},
+		{
+			"name": "Weapons-SaveAmmo",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/basic/weapons/index.ts",
+			"line": 7
+		},
+		{
+			"name": "Weather-Change",
+			"side": "server",
+			"kind": "call",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_server/src/basic/weather.ts",
+			"line": 47
+		},
+		{
+			"name": "Business-Trade",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/business/index.ts",
+			"line": 146
+		},
+		{
+			"name": "Business-Start",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/business/index.ts",
+			"line": 146
+		},
+		{
+			"name": "Business-Finish",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/business/index.ts",
+			"line": 146
+		},
+		{
+			"name": "Business-GetTax",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/business/tax.ts",
+			"line": 14
+		},
+		{
+			"name": "BusinessTrade-ShowMenu",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/business/trade.ts",
+			"line": 16
+		},
+		{
+			"name": "BusinessTrade-ShowOffer",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/business/trade.ts",
+			"line": 16
+		},
+		{
+			"name": "BusinessTrade-GetData",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/business/trade.ts",
+			"line": 16
+		},
+		{
+			"name": "Donation-GetPrices",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/donation/index.ts",
+			"line": 29
+		},
+		{
+			"name": "Donation-Buy",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/donation/index.ts",
+			"line": 29
+		},
+		{
+			"name": "BagActions-PutOn",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/actions/bag.ts",
+			"line": 8
+		},
+		{
+			"name": "BagActions-TakeOff",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/actions/bag.ts",
+			"line": 8
+		},
+		{
+			"name": "CuffsActions-UseHandcuffs",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/actions/cuffs.ts",
+			"line": 10
+		},
+		{
+			"name": "CuffsActions-UseCableTie",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/actions/cuffs.ts",
+			"line": 10
+		},
+		{
+			"name": "CuffsActions-Uncuff",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/actions/cuffs.ts",
+			"line": 10
+		},
+		{
+			"name": "CuffsActions-Untie",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/actions/cuffs.ts",
+			"line": 10
+		},
+		{
+			"name": "FollowActions-Reset",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/actions/follow.ts",
+			"line": 5
+		},
+		{
+			"name": "FollowActions-Start",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/actions/follow.ts",
+			"line": 5
+		},
+		{
+			"name": "FollowActions-Stop",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/actions/follow.ts",
+			"line": 5
+		},
+		{
+			"name": "FactionActions-Unmask",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/actions/index.ts",
+			"line": 12
+		},
+		{
+			"name": "FactionActions-ToVehicle",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/actions/index.ts",
+			"line": 12
+		},
+		{
+			"name": "FactionActions-Frisk",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/actions/index.ts",
+			"line": 12
+		},
+		{
+			"name": "Faction-GetMoney",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/api.ts",
+			"line": 6
+		},
+		{
+			"name": "Faction-GetMaterials",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/api.ts",
+			"line": 6
+		},
+		{
+			"name": "Faction-GetMembers",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/api.ts",
+			"line": 6
+		},
+		{
+			"name": "Faction-GetRanks",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/api.ts",
+			"line": 6
+		},
+		{
+			"name": "Faction-GetPlayerRank",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/api.ts",
+			"line": 6
+		},
+		{
+			"name": "Faction-GetRankData",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/api.ts",
+			"line": 6
+		},
+		{
+			"name": "Faction-GetVehicles",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/api.ts",
+			"line": 6
+		},
+		{
+			"name": "ArmyTicket-Give",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/army/ticket.ts",
+			"line": 6
+		},
+		{
+			"name": "EmsCalls-GetList",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/ems/calls.ts",
+			"line": 16
+		},
+		{
+			"name": "EmsCalls-Accept",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/ems/calls.ts",
+			"line": 16
+		},
+		{
+			"name": "EmsCalls-Create",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/ems/calls.ts",
+			"line": 16
+		},
+		{
+			"name": "EmsHealth-OfferHeal",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/ems/health.ts",
+			"line": 14
+		},
+		{
+			"name": "EmsHealth-Reanimate",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/ems/health.ts",
+			"line": 14
+		},
+		{
+			"name": "EmsLicenses-OfferLicense",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/ems/licenses.ts",
+			"line": 19
+		},
+		{
+			"name": "GangZones-GetInfo",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/gangs/zones.ts",
+			"line": 22
+		},
+		{
+			"name": "GangZones-GetList",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/gangs/zones.ts",
+			"line": 22
+		},
+		{
+			"name": "Factions-ShowGarage",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/garage/index.ts",
+			"line": 9
+		},
+		{
+			"name": "Factions-SpawnVehicle",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/garage/index.ts",
+			"line": 9
+		},
+		{
+			"name": "Factions-DespawnVehicle",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/garage/index.ts",
+			"line": 9
+		},
+		{
+			"name": "Factions-StartWork",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/index.ts",
+			"line": 16
+		},
+		{
+			"name": "Factions-FinishWork",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/index.ts",
+			"line": 16
+		},
+		{
+			"name": "Inventory-FactionMove",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/inventory/index.ts",
+			"line": 11
+		},
+		{
+			"name": "Inventory-FactionSeparate",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/inventory/index.ts",
+			"line": 11
+		},
+		{
+			"name": "Inventory-FactionTransfer",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/inventory/index.ts",
+			"line": 11
+		},
+		{
+			"name": "FactionJournal-GetList",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/journal.ts",
+			"line": 7
+		},
+		{
+			"name": "FactionLeader-Invite",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/leader.ts",
+			"line": 9
+		},
+		{
+			"name": "FactionLeader-Kick",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/leader.ts",
+			"line": 9
+		},
+		{
+			"name": "FactionLeader-SetRank",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/leader.ts",
+			"line": 9
+		},
+		{
+			"name": "FactionLeader-EditRank",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/leader.ts",
+			"line": 9
+		},
+		{
+			"name": "FactionLeader-ChangeMoney",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/leader.ts",
+			"line": 9
+		},
+		{
+			"name": "PoliceCalls-GetList",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/police/calls.ts",
+			"line": 19
+		},
+		{
+			"name": "PoliceCalls-MarkPosition",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/police/calls.ts",
+			"line": 19
+		},
+		{
+			"name": "GovInfo-GetUser",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/police/info.ts",
+			"line": 6
+		},
+		{
+			"name": "GovInfo-GetVehicle",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/police/info.ts",
+			"line": 6
+		},
+		{
+			"name": "Police-WriteTicket",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/police/ticket.ts",
+			"line": 16
+		},
+		{
+			"name": "WantedList-GetItems",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/police/wanted.ts",
+			"line": 9
+		},
+		{
+			"name": "WantedList-FindById",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/police/wanted.ts",
+			"line": 9
+		},
+		{
+			"name": "WantedList-AddItem",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/police/wanted.ts",
+			"line": 9
+		},
+		{
+			"name": "WantedList-RemoveItem",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/police/wanted.ts",
+			"line": 9
+		},
+		{
+			"name": "WantedList-Arrest",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/police/wanted.ts",
+			"line": 9
+		},
+		{
+			"name": "Factions-OrderMaterials",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/supply/index.ts",
+			"line": 18
+		},
+		{
+			"name": "FactionWardrobe-GetClothes",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/wardrobe/index.ts",
+			"line": 9
+		},
+		{
+			"name": "FactionWardrobe-WearItem",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/wardrobe/index.ts",
+			"line": 9
+		},
+		{
+			"name": "FactionWardrobe-Exit",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/wardrobe/index.ts",
+			"line": 9
+		},
+		{
+			"name": "playerDeath",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/factions/wars/capture/index.ts",
+			"line": 24
+		},
+		{
+			"name": "ZoneCapture-StartWar",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/wars/capture/index.ts",
+			"line": 27
+		},
+		{
+			"name": "ZoneCapture-ToDimension",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/wars/capture/index.ts",
+			"line": 27
+		},
+		{
+			"name": "FactionWorkshop-CraftItem",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/factions/workshop/index.ts",
+			"line": 10
+		},
+		{
+			"name": "setAnimation",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/helpers/animations.ts",
+			"line": 6
+		},
+		{
+			"name": "setWalkingStyle",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/helpers/animations.ts",
+			"line": 6
+		},
+		{
+			"name": "setMood",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/helpers/animations.ts",
+			"line": 6
+		},
+		{
+			"name": "setScenario",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/helpers/animations.ts",
+			"line": 6
+		},
+		{
+			"name": "stopScenario",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/helpers/animations.ts",
+			"line": 6
+		},
+		{
+			"name": "Scenarios-Play",
+			"side": "server",
+			"kind": "call",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_server/src/helpers/animations.ts",
+			"line": 37
+		},
+		{
+			"name": "attachObject",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/helpers/attachments.ts",
+			"line": 5
+		},
+		{
+			"name": "detachObject",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/helpers/attachments.ts",
+			"line": 5
+		},
+		{
+			"name": "Blips-GetNames",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/helpers/blips.ts",
+			"line": 3
+		},
+		{
+			"name": "Blips-MarkNearest",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/helpers/blips.ts",
+			"line": 3
+		},
+		{
+			"name": "createWaypoint",
+			"side": "server",
+			"kind": "call",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_server/src/helpers/blips.ts",
+			"line": 47
+		},
+		{
+			"name": "playerEnterColshape",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/helpers/colshapes.ts",
+			"line": 114
+		},
+		{
+			"name": "playerExitColshape",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/helpers/colshapes.ts",
+			"line": 114
+		},
+		{
+			"name": "playerKeyPress",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/helpers/colshapes.ts",
+			"line": 114
+		},
+		{
+			"name": "Offers-Accept",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/helpers/offers.ts",
+			"line": 16
+		},
+		{
+			"name": "Offers-Refuse",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/helpers/offers.ts",
+			"line": 16
+		},
+		{
+			"name": "playerJoin",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/helpers/players.ts",
+			"line": 73
+		},
+		{
+			"name": "House-ToEnter",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/house/index.ts",
+			"line": 143
+		},
+		{
+			"name": "House-ToggleLock",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/house/index.ts",
+			"line": 143
+		},
+		{
+			"name": "House-Trade",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/house/index.ts",
+			"line": 143
+		},
+		{
+			"name": "Inventory-HouseMove",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/house/inventory.ts",
+			"line": 11
+		},
+		{
+			"name": "Inventory-HouseSeparate",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/house/inventory.ts",
+			"line": 11
+		},
+		{
+			"name": "Inventory-HouseTransfer",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/house/inventory.ts",
+			"line": 11
+		},
+		{
+			"name": "House-GetTax",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/house/tax.ts",
+			"line": 13
+		},
+		{
+			"name": "HouseTrade-ShowMenu",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/house/trade.ts",
+			"line": 16
+		},
+		{
+			"name": "HouseTrade-ShowOffer",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/house/trade.ts",
+			"line": 16
+		},
+		{
+			"name": "HouseTrade-GetData",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/house/trade.ts",
+			"line": 16
+		},
+		{
+			"name": "Building-AddCargoToVehicle",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/jobs/building/driver.ts",
+			"line": 14
+		},
+		{
+			"name": "playerUnlockVehicle",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/jobs/car-theft/theft.ts",
+			"line": 12
+		},
+		{
+			"name": "Jobs-StartWork",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/jobs/index.ts",
+			"line": 37
+		},
+		{
+			"name": "Jobs-FinishWork",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/jobs/index.ts",
+			"line": 37
+		},
+		{
+			"name": "Jobs-ShowMenu",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/jobs/index.ts",
+			"line": 37
+		},
+		{
+			"name": "Postal-GetVehicleCargo",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/jobs/postal/driver.ts",
+			"line": 14
+		},
+		{
+			"name": "Postal-AddCargoToVehicle",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/jobs/postal/warehouse.ts",
+			"line": 15
+		},
+		{
+			"name": "Phone-Call",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/phone/calls.ts",
+			"line": 67
+		},
+		{
+			"name": "Phone-AcceptCall",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/phone/calls.ts",
+			"line": 67
+		},
+		{
+			"name": "Phone-DeclineCall",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/phone/calls.ts",
+			"line": 67
+		},
+		{
+			"name": "Phone-AddContact",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/phone/contacts.ts",
+			"line": 82
+		},
+		{
+			"name": "Phone-EditContact",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/phone/contacts.ts",
+			"line": 82
+		},
+		{
+			"name": "Phone-DeleteContact",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/phone/contacts.ts",
+			"line": 82
+		},
+		{
+			"name": "Phone-BlockContact",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/phone/contacts.ts",
+			"line": 82
+		},
+		{
+			"name": "Phone-UnblockContact",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/phone/contacts.ts",
+			"line": 82
+		},
+		{
+			"name": "Phone-GetContactByNumber",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/phone/contacts.ts",
+			"line": 82
+		},
+		{
+			"name": "Phone-GetContactsData",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/phone/contacts.ts",
+			"line": 82
+		},
+		{
+			"name": "Phone-GetNumberData",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/phone/number.ts",
+			"line": 12
+		},
+		{
+			"name": "Phone-BuyNumber",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/phone/number.ts",
+			"line": 12
+		},
+		{
+			"name": "Player-FriendOffer",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/actions.ts",
+			"line": 9
+		},
+		{
+			"name": "Player-GiveCash",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/actions.ts",
+			"line": 9
+		},
+		{
+			"name": "Character-Create",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/character.ts",
+			"line": 20
+		},
+		{
+			"name": "Character-ShowCreator",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/character.ts",
+			"line": 20
+		},
+		{
+			"name": "playerDeath",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/player/death.ts",
+			"line": 19
+		},
+		{
+			"name": "Player-Die",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/death.ts",
+			"line": 21
+		},
+		{
+			"name": "Player-OfferDocs",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/docs.ts",
+			"line": 10
+		},
+		{
+			"name": "Player-ShowDocs",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/docs.ts",
+			"line": 10
+		},
+		{
+			"name": "Particles-ShowSmoke",
+			"side": "server",
+			"kind": "call",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_server/src/player/drugs.ts",
+			"line": 26
+		},
+		{
+			"name": "playerSelectTarget",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/events.ts",
+			"line": 13
+		},
+		{
+			"name": "playerCreateWaypoint",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/events.ts",
+			"line": 13
+		},
+		{
+			"name": "Player-KickAfk",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/events.ts",
+			"line": 13
+		},
+		{
+			"name": "Inventory-Drop",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/inventory/index.ts",
+			"line": 19
+		},
+		{
+			"name": "Inventory-UnequipItem",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/inventory/index.ts",
+			"line": 19
+		},
+		{
+			"name": "Inventory-Use",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/inventory/index.ts",
+			"line": 19
+		},
+		{
+			"name": "Inventory-UseQuick",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/inventory/index.ts",
+			"line": 19
+		},
+		{
+			"name": "Inventory-ToQuick",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/inventory/index.ts",
+			"line": 19
+		},
+		{
+			"name": "Inventory-ShowPlayerMenu",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/inventory/storage.ts",
+			"line": 10
+		},
+		{
+			"name": "Inventory-SelfMove",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/inventory/storage.ts",
+			"line": 10
+		},
+		{
+			"name": "Inventory-SelfSeparate",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/inventory/storage.ts",
+			"line": 10
+		},
+		{
+			"name": "Inventory-PlayerTransfer",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/inventory/storage.ts",
+			"line": 10
+		},
+		{
+			"name": "Spawn-ShowMenu",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/spawn.ts",
+			"line": 15
+		},
+		{
+			"name": "Spawn-SelectType",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/spawn.ts",
+			"line": 15
+		},
+		{
+			"name": "Spawn-ToStart",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/player/spawn.ts",
+			"line": 15
+		},
+		{
+			"name": "playerSelectSpawn",
+			"side": "server",
+			"kind": "call",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_server/src/player/spawn.ts",
+			"line": 59
+		},
+		{
+			"name": "Bank-CreateAccount",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/bank.ts",
+			"line": 20
+		},
+		{
+			"name": "Bank-CashOut",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/bank.ts",
+			"line": 20
+		},
+		{
+			"name": "Bank-Replenish",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/bank.ts",
+			"line": 20
+		},
+		{
+			"name": "Bank-Transfer",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/bank.ts",
+			"line": 20
+		},
+		{
+			"name": "Bank-PayHouse",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/bank.ts",
+			"line": 20
+		},
+		{
+			"name": "Bank-PayBusiness",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/bank.ts",
+			"line": 20
+		},
+		{
+			"name": "Barbershop-Buy",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/barbershop.ts",
+			"line": 18
+		},
+		{
+			"name": "Barbershop-Exit",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/barbershop.ts",
+			"line": 18
+		},
+		{
+			"name": "ClothingShop-SetItem",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/clothing-shop.ts",
+			"line": 30
+		},
+		{
+			"name": "ClothingShop-GetClothes",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/clothing-shop.ts",
+			"line": 30
+		},
+		{
+			"name": "ClothingShop-Buy",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/clothing-shop.ts",
+			"line": 30
+		},
+		{
+			"name": "ClothingShop-Exit",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/clothing-shop.ts",
+			"line": 30
+		},
+		{
+			"name": "Fishing-Success",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/fishing/index.ts",
+			"line": 26
+		},
+		{
+			"name": "Fishing-Drop",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/fishing/index.ts",
+			"line": 26
+		},
+		{
+			"name": "Gas-Buy",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/gas.ts",
+			"line": 31
+		},
+		{
+			"name": "Licenses-Buy",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/licenses.ts",
+			"line": 22
+		},
+		{
+			"name": "LSC-Buy",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/lsc.ts",
+			"line": 73
+		},
+		{
+			"name": "Passport-Buy",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/passport.ts",
+			"line": 18
+		},
+		{
+			"name": "Services-ShowMenu",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/service.ts",
+			"line": 57
+		},
+		{
+			"name": "Supermarket-Buy",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/supermarket.ts",
+			"line": 39
+		},
+		{
+			"name": "Surgeon-Buy",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/surgeon.ts",
+			"line": 17
+		},
+		{
+			"name": "Surgeon-Exit",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/surgeon.ts",
+			"line": 17
+		},
+		{
+			"name": "TattooShop-Buy",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/tattoo-shop.ts",
+			"line": 25
+		},
+		{
+			"name": "TattooShop-Exit",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/tattoo-shop.ts",
+			"line": 25
+		},
+		{
+			"name": "VehicleDump-Recycle",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/vehicle-dump.ts",
+			"line": 14
+		},
+		{
+			"name": "playerQuit",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/services/vehicle-rent/rent.ts",
+			"line": 40
+		},
+		{
+			"name": "playerEnterVehicle",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/services/vehicle-rent/rent.ts",
+			"line": 40
+		},
+		{
+			"name": "playerExitVehicle",
+			"side": "server",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_server/src/services/vehicle-rent/rent.ts",
+			"line": 40
+		},
+		{
+			"name": "VehicleShop-Buy",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/vehicle-shop/shop.ts",
+			"line": 29
+		},
+		{
+			"name": "VehicleShop-Exit",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/vehicle-shop/shop.ts",
+			"line": 29
+		},
+		{
+			"name": "VehicleShop-StartTestDrive",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/vehicle-shop/test-drive.ts",
+			"line": 9
+		},
+		{
+			"name": "VehicleShop-StopTestDrive",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/vehicle-shop/test-drive.ts",
+			"line": 9
+		},
+		{
+			"name": "Weapons-Buy",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/weapons.ts",
+			"line": 49
+		},
+		{
+			"name": "Weapons-BuyAmmo",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/services/weapons.ts",
+			"line": 49
+		},
+		{
+			"name": "getCamCoords",
+			"side": "server",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_server/src/utils/savepos.ts",
+			"line": 34
+		},
+		{
+			"name": "Vehicle-DespawnItem",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/despawn.ts",
+			"line": 11
+		},
+		{
+			"name": "Vehicle-GetInfo",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/index.ts",
+			"line": 18
+		},
+		{
+			"name": "Vehicle-ToggleTrunk",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/index.ts",
+			"line": 18
+		},
+		{
+			"name": "Vehicle-GetPlayerList",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/index.ts",
+			"line": 18
+		},
+		{
+			"name": "Vehicle-ToggleEngine",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/index.ts",
+			"line": 18
+		},
+		{
+			"name": "Vehicle-ToggleDoor",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/index.ts",
+			"line": 18
+		},
+		{
+			"name": "Vehicle-ToggleIndicator",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/index.ts",
+			"line": 18
+		},
+		{
+			"name": "Vehicle-Refuel",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/index.ts",
+			"line": 18
+		},
+		{
+			"name": "Vehicle-Repair",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/index.ts",
+			"line": 18
+		},
+		{
+			"name": "Inventory-ShowVehicleMenu",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/inventory.ts",
+			"line": 14
+		},
+		{
+			"name": "Inventory-VehicleMove",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/inventory.ts",
+			"line": 14
+		},
+		{
+			"name": "Inventory-VehicleSeparate",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/inventory.ts",
+			"line": 14
+		},
+		{
+			"name": "Inventory-VehicleTransfer",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/inventory.ts",
+			"line": 14
+		},
+		{
+			"name": "Vehicle-ToggleLock",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/lock.ts",
+			"line": 11
+		},
+		{
+			"name": "Vehicle-OpenLock",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/lock.ts",
+			"line": 11
+		},
+		{
+			"name": "Vehicle-TriggerAlarm",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/lock.ts",
+			"line": 11
+		},
+		{
+			"name": "Vehicle-GetPassengers",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/passengers.ts",
+			"line": 3
+		},
+		{
+			"name": "Vehicle-KickPassenger",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/passengers.ts",
+			"line": 3
+		},
+		{
+			"name": "Vehicle-MarkPosition",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/spawn.ts",
+			"line": 12
+		},
+		{
+			"name": "Vehicle-DeliverForPlayer",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/spawn.ts",
+			"line": 12
+		},
+		{
+			"name": "VehicleSync-SetDirtLevel",
+			"side": "server",
+			"kind": "call",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_server/src/vehicle/state.ts",
+			"line": 67
+		},
+		{
+			"name": "VehicleSync-SetDoorsState",
+			"side": "server",
+			"kind": "call",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_server/src/vehicle/state.ts",
+			"line": 76
+		},
+		{
+			"name": "VehicleSync-SetLockStatus",
+			"side": "server",
+			"kind": "call",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_server/src/vehicle/state.ts",
+			"line": 87
+		},
+		{
+			"name": "VehicleSync-SetHealth",
+			"side": "server",
+			"kind": "call",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_server/src/vehicle/state.ts",
+			"line": 98
+		},
+		{
+			"name": "VehicleSync-SetIndicators",
+			"side": "server",
+			"kind": "call",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_server/src/vehicle/state.ts",
+			"line": 112
+		},
+		{
+			"name": "VehicleSync-SetRadioStation",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/sync.ts",
+			"line": 9
+		},
+		{
+			"name": "VehicleTrade-ShowMenu",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/trade.ts",
+			"line": 19
+		},
+		{
+			"name": "VehicleTrade-ShowOffer",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/trade.ts",
+			"line": 19
+		},
+		{
+			"name": "VehicleTrade-GetData",
+			"side": "server",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_server/src/vehicle/trade.ts",
+			"line": 19
+		},
+		{
+			"name": "getCamCoords",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/admin/cam.ts",
+			"line": 171
+		},
+		{
+			"name": "Admin-ToggleESP",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/admin/esp.ts",
+			"line": 76
+		},
+		{
+			"name": "render",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/admin/esp.ts",
+			"line": 77
+		},
+		{
+			"name": "render",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/admin/fly.ts",
+			"line": 26
+		},
+		{
+			"name": "Admin-SetGM",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/admin/index.ts",
+			"line": 13
+		},
+		{
+			"name": "Admin-Spectate",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/admin/spectator.ts",
+			"line": 5
+		},
+		{
+			"name": "Auth-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/auth/index.ts",
+			"line": 8
+		},
+		{
+			"name": "Auth-SuccessLogin",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/auth/index.ts",
+			"line": 8
+		},
+		{
+			"name": "Auth-SuccessRegister",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/auth/index.ts",
+			"line": 8
+		},
+		{
+			"name": "Character-ShowCreator",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/auth/index.ts",
+			"line": 31
+		},
+		{
+			"name": "Player-KickAfk",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/basic/afk.ts",
+			"line": 18
+		},
+		{
+			"name": "AntiCheat-SendReport",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/basic/anti-cheat.ts",
+			"line": 90
+		},
+		{
+			"name": "AntiCheat-Pause",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/anti-cheat.ts",
+			"line": 95
+		},
+		{
+			"name": "Spawn-ToStart",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/basic/cutscene.ts",
+			"line": 62
+		},
+		{
+			"name": "Dialog-SendAnswer",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/dialog.ts",
+			"line": 109
+		},
+		{
+			"name": "doorChangeState",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/basic/doors.ts",
+			"line": 19
+		},
+		{
+			"name": "locked",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/basic/doors.ts",
+			"line": 30
+		},
+		{
+			"name": "locked",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/basic/doors.ts",
+			"line": 36
+		},
+		{
+			"name": "Doors-Toggle",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/basic/doors.ts",
+			"line": 66
+		},
+		{
+			"name": "playerEnterColshape",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/basic/green-zone.ts",
+			"line": 31
+		},
+		{
+			"name": "playerExitColshape",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/basic/green-zone.ts",
+			"line": 31
+		},
+		{
+			"name": "render",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/basic/hud.ts",
+			"line": 16
+		},
+		{
+			"name": "HUD-GetBinds",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/hud.ts",
+			"line": 17
+		},
+		{
+			"name": "HUD-GetMinimapAnchor",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/hud.ts",
+			"line": 17
+		},
+		{
+			"name": "HUD-ShowLevel",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/hud.ts",
+			"line": 17
+		},
+		{
+			"name": "HUD-ShowInteract",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/hud.ts",
+			"line": 17
+		},
+		{
+			"name": "HUD-SetVisible",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/basic/hud.ts",
+			"line": 39
+		},
+		{
+			"name": "App-SetOnline",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/basic/hud.ts",
+			"line": 76
+		},
+		{
+			"name": "Player-SetId",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/basic/hud.ts",
+			"line": 80
+		},
+		{
+			"name": "Inventory-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/inventory.ts",
+			"line": 7
+		},
+		{
+			"name": "Inventory-SetCapacity",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/inventory.ts",
+			"line": 7
+		},
+		{
+			"name": "Inventory-UseQuick",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/basic/inventory.ts",
+			"line": 42
+		},
+		{
+			"name": "Inventory-UnequipItem",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/basic/inventory.ts",
+			"line": 48
+		},
+		{
+			"name": "Inventory-SetCapacity",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/basic/inventory.ts",
+			"line": 53
+		},
+		{
+			"name": "Inventory-ShowPlayerMenu",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/basic/inventory.ts",
+			"line": 61
+		},
+		{
+			"name": "getPlayerLocation",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/location.ts",
+			"line": 12
+		},
+		{
+			"name": "Offer-Show",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/offer.ts",
+			"line": 14
+		},
+		{
+			"name": "Offer-Create",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/offer.ts",
+			"line": 14
+		},
+		{
+			"name": "Offers-Accept",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/basic/offer.ts",
+			"line": 23
+		},
+		{
+			"name": "Offers-Refuse",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/basic/offer.ts",
+			"line": 31
+		},
+		{
+			"name": "Phone-CanClose",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/basic/phone.ts",
+			"line": 37
+		},
+		{
+			"name": "Phone-SetWallpaper",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/basic/phone.ts",
+			"line": 52
+		},
+		{
+			"name": "Voice-AddListener",
+			"side": "client",
+			"kind": "call",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_client/src/basic/phone.ts",
+			"line": 65
+		},
+		{
+			"name": "Phone-AcceptCall",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/basic/phone.ts",
+			"line": 72
+		},
+		{
+			"name": "Phone-DeclineCall",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/basic/phone.ts",
+			"line": 76
+		},
+		{
+			"name": "Voice-RemoveListener",
+			"side": "client",
+			"kind": "call",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_client/src/basic/phone.ts",
+			"line": 93
+		},
+		{
+			"name": "Voice-RemoveListener",
+			"side": "client",
+			"kind": "call",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_client/src/basic/phone.ts",
+			"line": 95
+		},
+		{
+			"name": "Phone-SetWallpaper",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/basic/phone.ts",
+			"line": 102
+		},
+		{
+			"name": "Phone-StartCall",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/phone.ts",
+			"line": 106
+		},
+		{
+			"name": "Phone-StopCall",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/phone.ts",
+			"line": 106
+		},
+		{
+			"name": "Phone-SetWallpaper",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/phone.ts",
+			"line": 106
+		},
+		{
+			"name": "Phone-CanOpen",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/phone.ts",
+			"line": 106
+		},
+		{
+			"name": "Scenarios-Play",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/scenarios.ts",
+			"line": 11
+		},
+		{
+			"name": "setScenario",
+			"side": "client",
+			"kind": "call",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_client/src/basic/scenarios.ts",
+			"line": 17
+		},
+		{
+			"name": "stopScenario",
+			"side": "client",
+			"kind": "call",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_client/src/basic/scenarios.ts",
+			"line": 21
+		},
+		{
+			"name": "Voice-AddListener",
+			"side": "client",
+			"kind": "call",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_client/src/basic/voice.ts",
+			"line": 29
+		},
+		{
+			"name": "Voice-RemoveListener",
+			"side": "client",
+			"kind": "call",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_client/src/basic/voice.ts",
+			"line": 43
+		},
+		{
+			"name": "render",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/basic/voice.ts",
+			"line": 169
+		},
+		{
+			"name": "playerStartTalking",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/basic/voice.ts",
+			"line": 169
+		},
+		{
+			"name": "playerStopTalking",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/basic/voice.ts",
+			"line": 169
+		},
+		{
+			"name": "playerQuit",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/basic/voice.ts",
+			"line": 169
+		},
+		{
+			"name": "Voice-Reload",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/voice.ts",
+			"line": 184
+		},
+		{
+			"name": "render",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/basic/waypoint.ts",
+			"line": 9
+		},
+		{
+			"name": "createWaypoint",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/basic/waypoint.ts",
+			"line": 9
+		},
+		{
+			"name": "playerCreateWaypoint",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/basic/waypoint.ts",
+			"line": 61
+		},
+		{
+			"name": "Weather-Change",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/basic/weather.ts",
+			"line": 3
+		},
+		{
+			"name": "FactionActions-GetItems",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 98
+		},
+		{
+			"name": "FactionActions-Call",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 98
+		},
+		{
+			"name": "FactionLeader-Invite",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 110
+		},
+		{
+			"name": "Player-OfferDocs",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 113
+		},
+		{
+			"name": "CuffsActions-UseHandcuffs",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 116
+		},
+		{
+			"name": "CuffsActions-Uncuff",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 119
+		},
+		{
+			"name": "CuffsActions-UseCableTie",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 122
+		},
+		{
+			"name": "CuffsActions-Untie",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 125
+		},
+		{
+			"name": "FactionActions-Unmask",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 128
+		},
+		{
+			"name": "FollowActions-Start",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 131
+		},
+		{
+			"name": "FollowActions-Stop",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 134
+		},
+		{
+			"name": "FactionActions-Frisk",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 137
+		},
+		{
+			"name": "FactionActions-ToVehicle",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 140
+		},
+		{
+			"name": "BagActions-PutOn",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 143
+		},
+		{
+			"name": "BagActions-TakeOff",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 146
+		},
+		{
+			"name": "EmsHealth-OfferHeal",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 149
+		},
+		{
+			"name": "EmsHealth-Reanimate",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 152
+		},
+		{
+			"name": "EmsLicenses-OfferLicense",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 155
+		},
+		{
+			"name": "EmsLicenses-OfferLicense",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 158
+		},
+		{
+			"name": "ArmyTicket-Give",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/actions.ts",
+			"line": 161
+		},
+		{
+			"name": "GangCapture-Start",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/factions/gang/capture.ts",
+			"line": 21
+		},
+		{
+			"name": "GangCapture-Stop",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/factions/gang/capture.ts",
+			"line": 21
+		},
+		{
+			"name": "GangCapture-UpdateMembers",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/factions/gang/capture.ts",
+			"line": 21
+		},
+		{
+			"name": "HUD-SetCapture",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/factions/gang/capture.ts",
+			"line": 71
+		},
+		{
+			"name": "render",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/factions/gang/zones.ts",
+			"line": 23
+		},
+		{
+			"name": "GangZones-UpdateZone",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/factions/gang/zones.ts",
+			"line": 26
+		},
+		{
+			"name": "GangZones-GetList",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/gang/zones.ts",
+			"line": 32
+		},
+		{
+			"name": "Factions-ShowGarage",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/factions/garage.ts",
+			"line": 1
+		},
+		{
+			"name": "Factions-ShowDocs",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/factions/index.ts",
+			"line": 8
+		},
+		{
+			"name": "Faction-GetPlayerRank",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/tablet.ts",
+			"line": 34
+		},
+		{
+			"name": "FactionWardrobe-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/factions/wardrobe.ts",
+			"line": 30
+		},
+		{
+			"name": "FactionWardrobe-CloseMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/factions/wardrobe.ts",
+			"line": 30
+		},
+		{
+			"name": "FactionWardrobe-ChangeType",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/factions/wardrobe.ts",
+			"line": 30
+		},
+		{
+			"name": "FactionWardrobe-ChangeItem",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/factions/wardrobe.ts",
+			"line": 30
+		},
+		{
+			"name": "FactionWardrobe-Exit",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/wardrobe.ts",
+			"line": 45
+		},
+		{
+			"name": "FactionWardrobe-GetClothes",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/wardrobe.ts",
+			"line": 56
+		},
+		{
+			"name": "FactionWardrobe-WearItem",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/factions/wardrobe.ts",
+			"line": 67
+		},
+		{
+			"name": "FactionWorkshop-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/factions/workshop.ts",
+			"line": 1
+		},
+		{
+			"name": "Fishing-ShowMinigame",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/games/fishing.ts",
+			"line": 38
+		},
+		{
+			"name": "Fishing-HideMinigame",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/games/fishing.ts",
+			"line": 38
+		},
+		{
+			"name": "render",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/games/fishing.ts",
+			"line": 42
+		},
+		{
+			"name": "Fishing-Success",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/games/fishing.ts",
+			"line": 89
+		},
+		{
+			"name": "Fishing-Drop",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/games/fishing.ts",
+			"line": 94
+		},
+		{
+			"name": "Lockpick-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/games/lockpick.ts",
+			"line": 8
+		},
+		{
+			"name": "Lockpick-Error",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/games/lockpick.ts",
+			"line": 8
+		},
+		{
+			"name": "Lockpick-Success",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/games/lockpick.ts",
+			"line": 8
+		},
+		{
+			"name": "Lockpick-Cancel",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/games/lockpick.ts",
+			"line": 8
+		},
+		{
+			"name": "Vehicle-OpenLock",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/games/lockpick.ts",
+			"line": 33
+		},
+		{
+			"name": "Vehicle-TriggerAlarm",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/games/lockpick.ts",
+			"line": 39
+		},
+		{
+			"name": "PlayerAnims-GetList",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/helpers/animations.ts",
+			"line": 274
+		},
+		{
+			"name": "PlayerAnims-SetAnim",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/helpers/animations.ts",
+			"line": 274
+		},
+		{
+			"name": "setAnimation",
+			"side": "client",
+			"kind": "call",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_client/src/helpers/animations.ts",
+			"line": 308
+		},
+		{
+			"name": "entityStreamIn",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/helpers/attachments.ts",
+			"line": 107
+		},
+		{
+			"name": "entityStreamOut",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/helpers/attachments.ts",
+			"line": 107
+		},
+		{
+			"name": "Blips-CreateItem",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/helpers/blips.ts",
+			"line": 26
+		},
+		{
+			"name": "Blips-CreatePoint",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/helpers/blips.ts",
+			"line": 26
+		},
+		{
+			"name": "Blips-Delete",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/helpers/blips.ts",
+			"line": 26
+		},
+		{
+			"name": "Browser-ShowPage",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/helpers/browser.ts",
+			"line": 34
+		},
+		{
+			"name": "Browser-ShowPage",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/helpers/browser.ts",
+			"line": 48
+		},
+		{
+			"name": "Browser-HidePage",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/helpers/browser.ts",
+			"line": 80
+		},
+		{
+			"name": "playerKeyPress",
+			"side": "client",
+			"kind": "call",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_client/src/helpers/colshapes.ts",
+			"line": 71
+		},
+		{
+			"name": "playerEnterColshape",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/helpers/colshapes.ts",
+			"line": 76
+		},
+		{
+			"name": "playerExitColshape",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/helpers/colshapes.ts",
+			"line": 76
+		},
+		{
+			"name": "Effects-StartDrunkEffect",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/helpers/effects.ts",
+			"line": 5
+		},
+		{
+			"name": "Notifications-ShowItem",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/helpers/notifications.ts",
+			"line": 7
+		},
+		{
+			"name": "Notifications-Show",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/helpers/notifications.ts",
+			"line": 21
+		},
+		{
+			"name": "Notifications-Help",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/helpers/notifications.ts",
+			"line": 21
+		},
+		{
+			"name": "entityStreamIn",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/helpers/objects.ts",
+			"line": 5
+		},
+		{
+			"name": "Particles-ShowSmoke",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/helpers/particles.ts",
+			"line": 3
+		},
+		{
+			"name": "Cargo-ShowVehiclePoint",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/jobs/cargo.ts",
+			"line": 12
+		},
+		{
+			"name": "Job-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/jobs/index.ts",
+			"line": 5
+		},
+		{
+			"name": "Job-FinishWork",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/jobs/index.ts",
+			"line": 5
+		},
+		{
+			"name": "Jobs-FinishWork",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/jobs/index.ts",
+			"line": 22
+		},
+		{
+			"name": "CharCreator-GetState",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/character.ts",
+			"line": 63
+		},
+		{
+			"name": "CharCreator-ChangeCamera",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/character.ts",
+			"line": 63
+		},
+		{
+			"name": "CharCreator-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/character.ts",
+			"line": 63
+		},
+		{
+			"name": "CharCreator-Submit",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/character.ts",
+			"line": 63
+		},
+		{
+			"name": "Character-UpdateParents",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/character.ts",
+			"line": 63
+		},
+		{
+			"name": "Character-ChangeGender",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/character.ts",
+			"line": 63
+		},
+		{
+			"name": "Character-UpdateFaceOptions",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/character.ts",
+			"line": 63
+		},
+		{
+			"name": "Character-UpdateHeadOverlay",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/character.ts",
+			"line": 63
+		},
+		{
+			"name": "Character-UpdateHair",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/character.ts",
+			"line": 63
+		},
+		{
+			"name": "Character-SetEyeColor",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/character.ts",
+			"line": 63
+		},
+		{
+			"name": "Character-SetClothes",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/character.ts",
+			"line": 63
+		},
+		{
+			"name": "Character-Create",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/player/character.ts",
+			"line": 181
+		},
+		{
+			"name": "render",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/player/controls.ts",
+			"line": 37
+		},
+		{
+			"name": "Player-ShowDeathMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/death.ts",
+			"line": 10
+		},
+		{
+			"name": "Player-ClientDie",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/death.ts",
+			"line": 10
+		},
+		{
+			"name": "Player-Die",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/player/death.ts",
+			"line": 37
+		},
+		{
+			"name": "FollowActions-Reset",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/player/follow.ts",
+			"line": 31
+		},
+		{
+			"name": "PlayerFriends-IsFriend",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/friends.ts",
+			"line": 5
+		},
+		{
+			"name": "PlayerFriends-Add",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/friends.ts",
+			"line": 5
+		},
+		{
+			"name": "PlayerFriends-PrepareString",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/friends.ts",
+			"line": 5
+		},
+		{
+			"name": "render",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/player/index.ts",
+			"line": 15
+		},
+		{
+			"name": "playerRotation",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/index.ts",
+			"line": 36
+		},
+		{
+			"name": "playerStopRotation",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/index.ts",
+			"line": 36
+		},
+		{
+			"name": "Player-ShowDocsMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/index.ts",
+			"line": 36
+		},
+		{
+			"name": "render",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/player/nametags.ts",
+			"line": 23
+		},
+		{
+			"name": "Spawn-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/spawn.ts",
+			"line": 7
+		},
+		{
+			"name": "playerSelectSpawn",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/player/spawn.ts",
+			"line": 10
+		},
+		{
+			"name": "entityStreamIn",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/player/sync.ts",
+			"line": 5
+		},
+		{
+			"name": "render",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/player/target/index.ts",
+			"line": 24
+		},
+		{
+			"name": "Target-CloseMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/target/index.ts",
+			"line": 27
+		},
+		{
+			"name": "Target-SelectItem",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/player/target/index.ts",
+			"line": 27
+		},
+		{
+			"name": "Target-Reset",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/player/target/index.ts",
+			"line": 46
+		},
+		{
+			"name": "playerSelectTarget",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/player/target/index.ts",
+			"line": 48
+		},
+		{
+			"name": "Target-ShowMenu",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/player/target/index.ts",
+			"line": 49
+		},
+		{
+			"name": "Player-ShowDocs",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/player/target/index.ts",
+			"line": 83
+		},
+		{
+			"name": "setMood",
+			"side": "client",
+			"kind": "call",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_client/src/player/target/index.ts",
+			"line": 86
+		},
+		{
+			"name": "setWalkingStyle",
+			"side": "client",
+			"kind": "call",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_client/src/player/target/index.ts",
+			"line": 89
+		},
+		{
+			"name": "Player-OfferDocs",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/player/target/player.ts",
+			"line": 12
+		},
+		{
+			"name": "VehicleTrade-ShowMenu",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/player/target/player.ts",
+			"line": 15
+		},
+		{
+			"name": "HouseTrade-ShowMenu",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/player/target/player.ts",
+			"line": 16
+		},
+		{
+			"name": "BusinessTrade-ShowMenu",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/player/target/player.ts",
+			"line": 17
+		},
+		{
+			"name": "Player-ShowCashMenu",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/player/target/player.ts",
+			"line": 22
+		},
+		{
+			"name": "Player-FriendOffer",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/player/target/player.ts",
+			"line": 27
+		},
+		{
+			"name": "Vehicle-KickPassenger",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/player/target/vehicle.ts",
+			"line": 29
+		},
+		{
+			"name": "Inventory-ShowVehicleMenu",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/player/target/vehicle.ts",
+			"line": 32
+		},
+		{
+			"name": "Vehicle-ToggleTrunk",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/player/target/vehicle.ts",
+			"line": 34
+		},
+		{
+			"name": "Vehicle-Refuel",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/player/target/vehicle.ts",
+			"line": 39
+		},
+		{
+			"name": "Vehicle-Repair",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/player/target/vehicle.ts",
+			"line": 40
+		},
+		{
+			"name": "House-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/property/index.ts",
+			"line": 3
+		},
+		{
+			"name": "Business-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/property/index.ts",
+			"line": 3
+		},
+		{
+			"name": "Bank-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/bank.ts",
+			"line": 3
+		},
+		{
+			"name": "Barbershop-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/barbershop.ts",
+			"line": 5
+		},
+		{
+			"name": "Barbershop-CloseMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/barbershop.ts",
+			"line": 5
+		},
+		{
+			"name": "Barbershop-GetData",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/barbershop.ts",
+			"line": 5
+		},
+		{
+			"name": "Barbershop-Exit",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/services/barbershop.ts",
+			"line": 26
+		},
+		{
+			"name": "ClothingShop-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/clothing-shop.ts",
+			"line": 45
+		},
+		{
+			"name": "ClothingShop-CloseMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/clothing-shop.ts",
+			"line": 45
+		},
+		{
+			"name": "ClothingShop-ChangeType",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/clothing-shop.ts",
+			"line": 45
+		},
+		{
+			"name": "ClothingShop-ChangeItem",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/clothing-shop.ts",
+			"line": 45
+		},
+		{
+			"name": "ClothingShop-Exit",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/services/clothing-shop.ts",
+			"line": 58
+		},
+		{
+			"name": "ClothingShop-GetClothes",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/services/clothing-shop.ts",
+			"line": 69
+		},
+		{
+			"name": "ClothingShop-SetData",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/services/clothing-shop.ts",
+			"line": 75
+		},
+		{
+			"name": "ClothingShop-SetItem",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/services/clothing-shop.ts",
+			"line": 86
+		},
+		{
+			"name": "Gas-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/gas.ts",
+			"line": 7
+		},
+		{
+			"name": "Gas-CloseMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/gas.ts",
+			"line": 7
+		},
+		{
+			"name": "Licenses-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/licenses.ts",
+			"line": 1
+		},
+		{
+			"name": "LSC-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/lsc.ts",
+			"line": 45
+		},
+		{
+			"name": "LSC-CloseMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/lsc.ts",
+			"line": 45
+		},
+		{
+			"name": "LSC-GetModAmount",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/lsc.ts",
+			"line": 45
+		},
+		{
+			"name": "LSC-GetInstalledItem",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/lsc.ts",
+			"line": 45
+		},
+		{
+			"name": "LSC-SetCategory",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/lsc.ts",
+			"line": 45
+		},
+		{
+			"name": "LSC-SetItem",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/lsc.ts",
+			"line": 45
+		},
+		{
+			"name": "LSC-SetColor",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/lsc.ts",
+			"line": 45
+		},
+		{
+			"name": "Passport-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/passport.ts",
+			"line": 3
+		},
+		{
+			"name": "Supermarket-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/supermarket.ts",
+			"line": 1
+		},
+		{
+			"name": "Surgeon-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/surgeon.ts",
+			"line": 9
+		},
+		{
+			"name": "Surgeon-CloseMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/surgeon.ts",
+			"line": 9
+		},
+		{
+			"name": "Surgeon-GetData",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/surgeon.ts",
+			"line": 9
+		},
+		{
+			"name": "Surgeon-Exit",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/services/surgeon.ts",
+			"line": 47
+		},
+		{
+			"name": "TattooShop-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/tattoo-shop.ts",
+			"line": 32
+		},
+		{
+			"name": "TattooShop-CloseMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/tattoo-shop.ts",
+			"line": 32
+		},
+		{
+			"name": "TattooShop-ChangeType",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/tattoo-shop.ts",
+			"line": 32
+		},
+		{
+			"name": "TattooShop-SetItem",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/tattoo-shop.ts",
+			"line": 32
+		},
+		{
+			"name": "TattooShop-Buy",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/tattoo-shop.ts",
+			"line": 32
+		},
+		{
+			"name": "TattooShop-Remove",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/tattoo-shop.ts",
+			"line": 32
+		},
+		{
+			"name": "TattooShop-Exit",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/services/tattoo-shop.ts",
+			"line": 49
+		},
+		{
+			"name": "TattooShop-Buy",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/services/tattoo-shop.ts",
+			"line": 115
+		},
+		{
+			"name": "TattooShop-Buy",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/services/tattoo-shop.ts",
+			"line": 126
+		},
+		{
+			"name": "VehicleDump-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/vehicle-dump.ts",
+			"line": 1
+		},
+		{
+			"name": "VehicleShop-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/vehicle-shop.ts",
+			"line": 104
+		},
+		{
+			"name": "VehicleShop-SetVehicle",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/vehicle-shop.ts",
+			"line": 104
+		},
+		{
+			"name": "VehicleShop-ChangeColor",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/vehicle-shop.ts",
+			"line": 104
+		},
+		{
+			"name": "VehicleShop-TestDrive",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/vehicle-shop.ts",
+			"line": 104
+		},
+		{
+			"name": "playerLeaveVehicle",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/services/vehicle-shop.ts",
+			"line": 111
+		},
+		{
+			"name": "VehicleShop-Exit",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/services/vehicle-shop.ts",
+			"line": 148
+		},
+		{
+			"name": "VehicleShop-StartTestDrive",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/services/vehicle-shop.ts",
+			"line": 161
+		},
+		{
+			"name": "VehicleShop-StopTestDrive",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/services/vehicle-shop.ts",
+			"line": 175
+		},
+		{
+			"name": "Weapons-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/services/weapons.ts",
+			"line": 1
+		},
+		{
+			"name": "BusinessTrade-SendOffer",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/trading/business.ts",
+			"line": 5
+		},
+		{
+			"name": "BusinessTrade-ConfirmOffer",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/trading/business.ts",
+			"line": 5
+		},
+		{
+			"name": "BusinessTrade-RefuseOffer",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/trading/business.ts",
+			"line": 5
+		},
+		{
+			"name": "BusinessTrade-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/trading/business.ts",
+			"line": 5
+		},
+		{
+			"name": "BusinessTrade-ShowOffer",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/trading/business.ts",
+			"line": 23
+		},
+		{
+			"name": "HouseTrade-SendOffer",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/trading/house.ts",
+			"line": 5
+		},
+		{
+			"name": "HouseTrade-ConfirmOffer",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/trading/house.ts",
+			"line": 5
+		},
+		{
+			"name": "HouseTrade-RefuseOffer",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/trading/house.ts",
+			"line": 5
+		},
+		{
+			"name": "HouseTrade-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/trading/house.ts",
+			"line": 5
+		},
+		{
+			"name": "HouseTrade-ShowOffer",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/trading/house.ts",
+			"line": 23
+		},
+		{
+			"name": "VehicleTrade-SendOffer",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/trading/vehicle.ts",
+			"line": 5
+		},
+		{
+			"name": "VehicleTrade-ConfirmOffer",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/trading/vehicle.ts",
+			"line": 5
+		},
+		{
+			"name": "VehicleTrade-RefuseOffer",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/trading/vehicle.ts",
+			"line": 5
+		},
+		{
+			"name": "VehicleTrade-ShowMenu",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/trading/vehicle.ts",
+			"line": 5
+		},
+		{
+			"name": "VehicleTrade-ShowOffer",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/trading/vehicle.ts",
+			"line": 23
+		},
+		{
+			"name": "Binder-Rebind",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/utils/binder.ts",
+			"line": 16
+		},
+		{
+			"name": "playerEnterColshape",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/vehicle/autopilot.ts",
+			"line": 15
+		},
+		{
+			"name": "playerCreateWaypoint",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/vehicle/autopilot.ts",
+			"line": 15
+		},
+		{
+			"name": "playerLeaveVehicle",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/vehicle/autopilot.ts",
+			"line": 15
+		},
+		{
+			"name": "Vehicle-ToggleLock",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/vehicle/controls.ts",
+			"line": 31
+		},
+		{
+			"name": "Vehicle-ToggleDoor",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/vehicle/controls.ts",
+			"line": 45
+		},
+		{
+			"name": "Vehicle-ToggleIndicator",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/vehicle/controls.ts",
+			"line": 58
+		},
+		{
+			"name": "Vehicle-ToggleEngine",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/vehicle/controls.ts",
+			"line": 76
+		},
+		{
+			"name": "render",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/vehicle/controls.ts",
+			"line": 138
+		},
+		{
+			"name": "playerLeaveVehicle",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/vehicle/controls.ts",
+			"line": 138
+		},
+		{
+			"name": "render",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/vehicle/cruise-control.ts",
+			"line": 13
+		},
+		{
+			"name": "Vehicle-GetSpec",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/vehicle/index.ts",
+			"line": 21
+		},
+		{
+			"name": "Vehicle-GetFreeSeat",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/vehicle/index.ts",
+			"line": 21
+		},
+		{
+			"name": "Vehicle-GetSpawnCoords",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/vehicle/index.ts",
+			"line": 21
+		},
+		{
+			"name": "Speedometer-UpdateState",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/vehicle/speedometer.ts",
+			"line": 58
+		},
+		{
+			"name": "Speedometer-UpdateState",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_client/src/vehicle/speedometer.ts",
+			"line": 60
+		},
+		{
+			"name": "VehicleSync-SetRadioStation",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/vehicle/sync.ts",
+			"line": 54
+		},
+		{
+			"name": "entityStreamIn",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/vehicle/sync.ts",
+			"line": 102
+		},
+		{
+			"name": "playerEnterVehicle",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/vehicle/sync.ts",
+			"line": 102
+		},
+		{
+			"name": "playerLeaveVehicle",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/vehicle/sync.ts",
+			"line": 102
+		},
+		{
+			"name": "VehicleSync-SetLockStatus",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/vehicle/sync.ts",
+			"line": 108
+		},
+		{
+			"name": "VehicleSync-SetDoorsState",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/vehicle/sync.ts",
+			"line": 108
+		},
+		{
+			"name": "VehicleSync-SetHealth",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/vehicle/sync.ts",
+			"line": 108
+		},
+		{
+			"name": "VehicleSync-SetIndicators",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/vehicle/sync.ts",
+			"line": 108
+		},
+		{
+			"name": "Weapons-SaveAmmo",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/weapons/index.ts",
+			"line": 73
+		},
+		{
+			"name": "playerWeaponShot",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/weapons/index.ts",
+			"line": 92
+		},
+		{
+			"name": "Weapons-GetClipSize",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/weapons/index.ts",
+			"line": 96
+		},
+		{
+			"name": "Weapons-GiveWeapon",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/weapons/index.ts",
+			"line": 96
+		},
+		{
+			"name": "Weapons-GiveAmmo",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/weapons/index.ts",
+			"line": 96
+		},
+		{
+			"name": "Weapons-RemoveWeapon",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/weapons/index.ts",
+			"line": 96
+		},
+		{
+			"name": "getCurrentAmmo",
+			"side": "client",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_client/src/weapons/index.ts",
+			"line": 96
+		},
+		{
+			"name": "WeaponSync-ApplyDamage",
+			"side": "client",
+			"kind": "call",
+			"transport": "raw",
+			"target": "server",
+			"file": "src_client/src/weapons/index.ts",
+			"line": 118
+		},
+		{
+			"name": "playerWeaponShot",
+			"side": "client",
+			"kind": "handler",
+			"transport": "raw",
+			"target": "client",
+			"file": "src_client/src/weapons/sync.ts",
+			"line": 17
+		},
+		{
+			"name": "playerWeaponShot",
+			"side": "client",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_client/src/weapons/sync.ts",
+			"line": 54
+		},
+		{
+			"name": "Browser-ShowPage",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/App.vue",
+			"line": 11
+		},
+		{
+			"name": "Admin-Ban",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/ban/ban.vue",
+			"line": 26
+		},
+		{
+			"name": "Admin-Unban",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/ban/unban.vue",
+			"line": 20
+		},
+		{
+			"name": "Admin-SendToChat",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/chat/index.vue",
+			"line": 19
+		},
+		{
+			"name": "Admin-ReleaseDemorgan",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/demorgan/index.vue",
+			"line": 28
+		},
+		{
+			"name": "Admin-ToDemorgan",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/demorgan/index.vue",
+			"line": 39
+		},
+		{
+			"name": "Admin-StartFortWar",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/faction/fort.vue",
+			"line": 7
+		},
+		{
+			"name": "Admin-SetZoneOwner",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/faction/gang-zone.vue",
+			"line": 24
+		},
+		{
+			"name": "Admin-SetFactionLeader",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/faction/leader.vue",
+			"line": 28
+		},
+		{
+			"name": "Admin-CreateHouse",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/house/creator.vue",
+			"line": 25
+		},
+		{
+			"name": "Admin-DeleteHouse",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/house/destroyer.vue",
+			"line": 19
+		},
+		{
+			"name": "Browser-HidePage",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Admin/index.vue",
+			"line": 96
+		},
+		{
+			"name": "Admin-GetJournal",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/journal/index.vue",
+			"line": 61
+		},
+		{
+			"name": "Admin-Kick",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/kick/index.vue",
+			"line": 22
+		},
+		{
+			"name": "Admin-GetPlayerLicenses",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/licenses/index.vue",
+			"line": 49
+		},
+		{
+			"name": "Admin-ChangeMoney",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/money/index.vue",
+			"line": 22
+		},
+		{
+			"name": "Admin-GetPlayers",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/partials/players.vue",
+			"line": 37
+		},
+		{
+			"name": "Admin-GetReports",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/reports/index.vue",
+			"line": 28
+		},
+		{
+			"name": "Admin-AcceptReport",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/reports/index.vue",
+			"line": 39
+		},
+		{
+			"name": "Admin-ChangeSkin",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/skin/index.vue",
+			"line": 21
+		},
+		{
+			"name": "Admin-Spectate",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/spectator/index.vue",
+			"line": 18
+		},
+		{
+			"name": "Admin-Teleport",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/teleport/index.vue",
+			"line": 23
+		},
+		{
+			"name": "Admin-Teleport",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/teleport/index.vue",
+			"line": 27
+		},
+		{
+			"name": "Admin-Teleport",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/teleport/index.vue",
+			"line": 35
+		},
+		{
+			"name": "Admin-CreateVehicle",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/vehicle/creator.vue",
+			"line": 31
+		},
+		{
+			"name": "Admin-DespawnVehicle",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Admin/vehicle/despawn.vue",
+			"line": 19
+		},
+		{
+			"name": "Auth-SignInWithCode",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Auth/confirm.vue",
+			"line": 21
+		},
+		{
+			"name": "Auth-SuccessLogin",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Auth/confirm.vue",
+			"line": 23
+		},
+		{
+			"name": "Auth-ResetPassword",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Auth/forgot.vue",
+			"line": 47
+		},
+		{
+			"name": "Auth-GetResetCode",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Auth/forgot.vue",
+			"line": 59
+		},
+		{
+			"name": "Auth-SignIn",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Auth/login.vue",
+			"line": 30
+		},
+		{
+			"name": "Auth-SuccessLogin",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Auth/login.vue",
+			"line": 34
+		},
+		{
+			"name": "Auth-SignUp",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Auth/register.vue",
+			"line": 62
+		},
+		{
+			"name": "Auth-SuccessRegister",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Auth/register.vue",
+			"line": 63
+		},
+		{
+			"name": "Auth-GetRegisterCode",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Auth/register.vue",
+			"line": 76
+		},
+		{
+			"name": "Business-Start",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Business/index.vue",
+			"line": 51
+		},
+		{
+			"name": "Business-Finish",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Business/index.vue",
+			"line": 56
+		},
+		{
+			"name": "Business-Trade",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Business/index.vue",
+			"line": 64
+		},
+		{
+			"name": "Browser-HidePage",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Business/index.vue",
+			"line": 73
+		},
+		{
+			"name": "CharCreator-GetState",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Character/appearance/index.vue",
+			"line": 45
+		},
+		{
+			"name": "Character-UpdateHeadOverlay",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Character/appearance/index.vue",
+			"line": 71
+		},
+		{
+			"name": "Character-SetEyeColor",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Character/appearance/index.vue",
+			"line": 77
+		},
+		{
+			"name": "Character-UpdateHair",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Character/appearance/index.vue",
+			"line": 85
+		},
+		{
+			"name": "CharCreator-GetState",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Character/body.vue",
+			"line": 128
+		},
+		{
+			"name": "Character-UpdateParents",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Character/body.vue",
+			"line": 138
+		},
+		{
+			"name": "Character-ChangeGender",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Character/body.vue",
+			"line": 161
+		},
+		{
+			"name": "CharCreator-GetState",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Character/clothes.vue",
+			"line": 33
+		},
+		{
+			"name": "Character-SetClothes",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Character/clothes.vue",
+			"line": 49
+		},
+		{
+			"name": "CharCreator-GetState",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Character/face.vue",
+			"line": 44
+		},
+		{
+			"name": "Character-UpdateFaceOptions",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Character/face.vue",
+			"line": 52
+		},
+		{
+			"name": "CharCreator-ChangeCamera",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Character/index.vue",
+			"line": 26
+		},
+		{
+			"name": "CharCreator-Submit",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Character/index.vue",
+			"line": 41
+		},
+		{
+			"name": "PlayerFriends-PrepareString",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Chat/index.vue",
+			"line": 52
+		},
+		{
+			"name": "Browser-HidePage",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Common/outline-button.vue",
+			"line": 18
+		},
+		{
+			"name": "Daily-GetData",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Daily/index.vue",
+			"line": 37
+		},
+		{
+			"name": "Daily-GetAward",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Daily/index.vue",
+			"line": 41
+		},
+		{
+			"name": "Dialog-SendAnswer",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Dialog/index.vue",
+			"line": 26
+		},
+		{
+			"name": "Browser-HidePage",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Factions/docs/index.vue",
+			"line": 28
+		},
+		{
+			"name": "Factions-SpawnVehicle",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Factions/garage/index.vue",
+			"line": 37
+		},
+		{
+			"name": "FactionWardrobe-ChangeType",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Factions/wardrobe/index.vue",
+			"line": 41
+		},
+		{
+			"name": "FactionWardrobe-ChangeItem",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Factions/wardrobe/index.vue",
+			"line": 51
+		},
+		{
+			"name": "Factions-StartWork",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Factions/wardrobe/index.vue",
+			"line": 55
+		},
+		{
+			"name": "Factions-FinishWork",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Factions/wardrobe/index.vue",
+			"line": 62
+		},
+		{
+			"name": "FactionWorkshop-CraftItem",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Factions/workshop/index.vue",
+			"line": 59
+		},
+		{
+			"name": "Lockpick-Success",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Games/Lockpick/index.vue",
+			"line": 79
+		},
+		{
+			"name": "Lockpick-Error",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Games/Lockpick/index.vue",
+			"line": 82
+		},
+		{
+			"name": "House-Trade",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/House/index.vue",
+			"line": 58
+		},
+		{
+			"name": "Browser-HidePage",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/House/index.vue",
+			"line": 67
+		},
+		{
+			"name": "House-ToggleLock",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/House/index.vue",
+			"line": 75
+		},
+		{
+			"name": "House-ToEnter",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/House/index.vue",
+			"line": 87
+		},
+		{
+			"name": "Browser-HidePage",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/House/index.vue",
+			"line": 89
+		},
+		{
+			"name": "HUD-SetAmmo",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/components/HUD/ammo.vue",
+			"line": 14
+		},
+		{
+			"name": "getCurrentAmmo",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/HUD/ammo.vue",
+			"line": 16
+		},
+		{
+			"name": "Phone-GetContactByNumber",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/HUD/call.vue",
+			"line": 15
+		},
+		{
+			"name": "HUD-GetBinds",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/HUD/index.vue",
+			"line": 41
+		},
+		{
+			"name": "HUD-GetMinimapAnchor",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/HUD/index.vue",
+			"line": 47
+		},
+		{
+			"name": "HUD-ShowInteract",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/components/HUD/interact.vue",
+			"line": 8
+		},
+		{
+			"name": "HUD-ShowLevel",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/components/HUD/level.vue",
+			"line": 13
+		},
+		{
+			"name": "HUD-SetLocation",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/components/HUD/location.vue",
+			"line": 18
+		},
+		{
+			"name": "getPlayerLocation",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/HUD/location.vue",
+			"line": 28
+		},
+		{
+			"name": "HUD-SetMicStatus",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/components/HUD/mic.vue",
+			"line": 14
+		},
+		{
+			"name": "HUD-ShowOffer",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/components/HUD/offer.vue",
+			"line": 16
+		},
+		{
+			"name": "Speedometer-UpdateState",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/components/HUD/speedometer/index.vue",
+			"line": 51
+		},
+		{
+			"name": "Inventory-Use",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Inventory/index.vue",
+			"line": 47
+		},
+		{
+			"name": "Inventory-ToQuick",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Inventory/index.vue",
+			"line": 67
+		},
+		{
+			"name": "Inventory-UnequipItem",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Inventory/index.vue",
+			"line": 79
+		},
+		{
+			"name": "Inventory-Drop",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Inventory/index.vue",
+			"line": 112
+		},
+		{
+			"name": "Jobs-StartWork",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Job/index.vue",
+			"line": 54
+		},
+		{
+			"name": "Job-FinishWork",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Job/index.vue",
+			"line": 62
+		},
+		{
+			"name": "Browser-HidePage",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Job/index.vue",
+			"line": 66
+		},
+		{
+			"name": "Phone-GetContactByNumber",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/call/index.vue",
+			"line": 22
+		},
+		{
+			"name": "Phone-AcceptCall",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/call/index.vue",
+			"line": 39
+		},
+		{
+			"name": "Phone-DeclineCall",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/call/index.vue",
+			"line": 54
+		},
+		{
+			"name": "Phone-Call",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/contacts/contact/index.vue",
+			"line": 25
+		},
+		{
+			"name": "Phone-GetContactsData",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/contacts/index.vue",
+			"line": 26
+		},
+		{
+			"name": "Phone-DeleteContact",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/contacts/index.vue",
+			"line": 66
+		},
+		{
+			"name": "Donation-GetPrices",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/donation/index.vue",
+			"line": 32
+		},
+		{
+			"name": "Donation-Buy",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/donation/index.vue",
+			"line": 39
+		},
+		{
+			"name": "Phone-CanClose",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/components/Phone/index.vue",
+			"line": 27
+		},
+		{
+			"name": "Phone-Call",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/keypad/index.vue",
+			"line": 26
+		},
+		{
+			"name": "Blips-GetNames",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/maps/index.vue",
+			"line": 14
+		},
+		{
+			"name": "Blips-MarkNearest",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/maps/index.vue",
+			"line": 20
+		},
+		{
+			"name": "Referral-GetInfo",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/referral/index.vue",
+			"line": 20
+		},
+		{
+			"name": "Referral-UseCode",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/referral/index.vue",
+			"line": 31
+		},
+		{
+			"name": "HUD-GetBinds",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Phone/settings/keys/index.vue",
+			"line": 37
+		},
+		{
+			"name": "Binder-Rebind",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Phone/settings/keys/index.vue",
+			"line": 50
+		},
+		{
+			"name": "Voice-Reload",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Phone/settings/voice/index.vue",
+			"line": 12
+		},
+		{
+			"name": "Phone-SetWallpaper",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Phone/settings/wallpaper/index.vue",
+			"line": 12
+		},
+		{
+			"name": "Phone-GetNumberData",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/sim/index.vue",
+			"line": 22
+		},
+		{
+			"name": "Phone-BuyNumber",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/sim/index.vue",
+			"line": 34
+		},
+		{
+			"name": "Admin-SendReport",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/support/index.vue",
+			"line": 18
+		},
+		{
+			"name": "Vehicle-GetPlayerList",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/vehicles/index.vue",
+			"line": 20
+		},
+		{
+			"name": "Vehicle-MarkPosition",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/vehicles/index.vue",
+			"line": 33
+		},
+		{
+			"name": "Vehicle-GetSpawnCoords",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Phone/vehicles/index.vue",
+			"line": 45
+		},
+		{
+			"name": "Vehicle-DeliverForPlayer",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/vehicles/index.vue",
+			"line": 49
+		},
+		{
+			"name": "Vehicle-DespawnItem",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Phone/vehicles/index.vue",
+			"line": 64
+		},
+		{
+			"name": "Player-ShowCashMenu",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/components/Player/cash.vue",
+			"line": 24
+		},
+		{
+			"name": "Player-GiveCash",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Player/cash.vue",
+			"line": 34
+		},
+		{
+			"name": "Player-ClientDie",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Player/death.vue",
+			"line": 20
+		},
+		{
+			"name": "EmsCalls-Create",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Player/death.vue",
+			"line": 24
+		},
+		{
+			"name": "Bank-CreateAccount",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/bank/account.vue",
+			"line": 30
+		},
+		{
+			"name": "Business-GetTax",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/bank/business.vue",
+			"line": 22
+		},
+		{
+			"name": "Bank-PayBusiness",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/bank/business.vue",
+			"line": 31
+		},
+		{
+			"name": "Bank-CashOut",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/bank/cash.vue",
+			"line": 20
+		},
+		{
+			"name": "House-GetTax",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/bank/house.vue",
+			"line": 23
+		},
+		{
+			"name": "Bank-PayHouse",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/bank/house.vue",
+			"line": 32
+		},
+		{
+			"name": "Bank-Replenish",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/bank/replenish.vue",
+			"line": 20
+		},
+		{
+			"name": "Bank-Transfer",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/bank/transfer.vue",
+			"line": 35
+		},
+		{
+			"name": "Barbershop-GetData",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/barbershop/index.vue",
+			"line": 26
+		},
+		{
+			"name": "Barbershop-Buy",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/barbershop/index.vue",
+			"line": 28
+		},
+		{
+			"name": "Barbershop-CloseMenu",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/barbershop/index.vue",
+			"line": 32
+		},
+		{
+			"name": "ClothingShop-SetData",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/components/Services/clothing-shop/index.vue",
+			"line": 40
+		},
+		{
+			"name": "ClothingShop-ChangeType",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/clothing-shop/index.vue",
+			"line": 50
+		},
+		{
+			"name": "ClothingShop-ChangeItem",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/clothing-shop/index.vue",
+			"line": 62
+		},
+		{
+			"name": "ClothingShop-ChangeItem",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/clothing-shop/index.vue",
+			"line": 68
+		},
+		{
+			"name": "ClothingShop-Buy",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/clothing-shop/index.vue",
+			"line": 80
+		},
+		{
+			"name": "Gas-Buy",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/gas/index.vue",
+			"line": 77
+		},
+		{
+			"name": "Licenses-Buy",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/licenses/index.vue",
+			"line": 51
+		},
+		{
+			"name": "LSC-GetModAmount",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/lsc/index.vue",
+			"line": 53
+		},
+		{
+			"name": "LSC-SetCategory",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/lsc/index.vue",
+			"line": 66
+		},
+		{
+			"name": "LSC-SetItem",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/lsc/index.vue",
+			"line": 93
+		},
+		{
+			"name": "LSC-SetColor",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/lsc/index.vue",
+			"line": 99
+		},
+		{
+			"name": "LSC-Buy",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/lsc/index.vue",
+			"line": 113
+		},
+		{
+			"name": "LSC-GetInstalledItem",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/lsc/index.vue",
+			"line": 115
+		},
+		{
+			"name": "Passport-Buy",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/passport/index.vue",
+			"line": 37
+		},
+		{
+			"name": "Supermarket-Buy",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/supermarket/index.vue",
+			"line": 55
+		},
+		{
+			"name": "Surgeon-GetData",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/surgeon/index.vue",
+			"line": 53
+		},
+		{
+			"name": "Surgeon-Buy",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/surgeon/index.vue",
+			"line": 55
+		},
+		{
+			"name": "Surgeon-CloseMenu",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/surgeon/index.vue",
+			"line": 59
+		},
+		{
+			"name": "TattooShop-ChangeType",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/tattoo-shop/index.vue",
+			"line": 42
+		},
+		{
+			"name": "TattooShop-SetItem",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/tattoo-shop/index.vue",
+			"line": 48
+		},
+		{
+			"name": "TattooShop-Buy",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/tattoo-shop/index.vue",
+			"line": 55
+		},
+		{
+			"name": "TattooShop-Remove",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/tattoo-shop/index.vue",
+			"line": 61
+		},
+		{
+			"name": "VehicleDump-Recycle",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/vehicle-dump/index.vue",
+			"line": 29
+		},
+		{
+			"name": "Browser-HidePage",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/vehicle-dump/index.vue",
+			"line": 30
+		},
+		{
+			"name": "VehicleShop-SetVehicle",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/vehicle-shop/index.vue",
+			"line": 60
+		},
+		{
+			"name": "VehicleShop-ChangeColor",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/vehicle-shop/index.vue",
+			"line": 66
+		},
+		{
+			"name": "VehicleShop-TestDrive",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/vehicle-shop/index.vue",
+			"line": 72
+		},
+		{
+			"name": "VehicleShop-Buy",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/vehicle-shop/index.vue",
+			"line": 79
+		},
+		{
+			"name": "Vehicle-GetInfo",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/vehicle-shop/info.vue",
+			"line": 26
+		},
+		{
+			"name": "Vehicle-GetSpec",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/vehicle-shop/spec.vue",
+			"line": 37
+		},
+		{
+			"name": "Weapons-BuyAmmo",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/weapons/ammo.vue",
+			"line": 41
+		},
+		{
+			"name": "Weapons-Buy",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Services/weapons/index.vue",
+			"line": 48
+		},
+		{
+			"name": "Weapons-GetClipSize",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Services/weapons/preview.vue",
+			"line": 15
+		},
+		{
+			"name": "Spawn-SelectType",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Spawn/index.vue",
+			"line": 43
+		},
+		{
+			"name": "Browser-HidePage",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Spawn/index.vue",
+			"line": 44
+		},
+		{
+			"name": "WantedList-Arrest",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/database/users/arrest.vue",
+			"line": 23
+		},
+		{
+			"name": "Police-WriteTicket",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/database/users/fine.vue",
+			"line": 23
+		},
+		{
+			"name": "GovInfo-GetUser",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/database/users/index.vue",
+			"line": 16
+		},
+		{
+			"name": "WantedList-FindById",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/database/users/user.vue",
+			"line": 25
+		},
+		{
+			"name": "GovInfo-GetVehicle",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/database/vehicles/index.vue",
+			"line": 15
+		},
+		{
+			"name": "GangZones-GetInfo",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/gang-zones/index.vue",
+			"line": 18
+		},
+		{
+			"name": "ZoneCapture-StartWar",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/gang-zones/index.vue",
+			"line": 26
+		},
+		{
+			"name": "FactionJournal-GetList",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/journal/index.vue",
+			"line": 38
+		},
+		{
+			"name": "Faction-GetMaterials",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/materials/index.vue",
+			"line": 19
+		},
+		{
+			"name": "Factions-OrderMaterials",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/materials/index.vue",
+			"line": 24
+		},
+		{
+			"name": "EmsCalls-GetList",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/medic-calls/index.vue",
+			"line": 21
+		},
+		{
+			"name": "EmsCalls-Accept",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/medic-calls/index.vue",
+			"line": 26
+		},
+		{
+			"name": "Faction-GetMembers",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/members/index.vue",
+			"line": 29
+		},
+		{
+			"name": "FactionLeader-SetRank",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/members/member.vue",
+			"line": 23
+		},
+		{
+			"name": "FactionLeader-Kick",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/members/member.vue",
+			"line": 31
+		},
+		{
+			"name": "Faction-GetRanks",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/members/rank-select.vue",
+			"line": 29
+		},
+		{
+			"name": "Faction-GetMoney",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/money/index.vue",
+			"line": 18
+		},
+		{
+			"name": "FactionLeader-ChangeMoney",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/money/index.vue",
+			"line": 26
+		},
+		{
+			"name": "PoliceCalls-GetList",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/police-calls/index.vue",
+			"line": 20
+		},
+		{
+			"name": "PoliceCalls-MarkPosition",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/police-calls/index.vue",
+			"line": 25
+		},
+		{
+			"name": "Faction-GetRanks",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/ranks/index.vue",
+			"line": 26
+		},
+		{
+			"name": "Faction-GetRankData",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/ranks/rank.vue",
+			"line": 39
+		},
+		{
+			"name": "FactionLeader-EditRank",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/ranks/rank.vue",
+			"line": 52
+		},
+		{
+			"name": "Faction-GetVehicles",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/vehicles/index.vue",
+			"line": 20
+		},
+		{
+			"name": "Factions-DespawnVehicle",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/vehicles/index.vue",
+			"line": 24
+		},
+		{
+			"name": "WantedList-AddItem",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/wanted/form.vue",
+			"line": 19
+		},
+		{
+			"name": "WantedList-GetItems",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/wanted/index.vue",
+			"line": 31
+		},
+		{
+			"name": "WantedList-RemoveItem",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Tablet/pages/wanted/item.vue",
+			"line": 42
+		},
+		{
+			"name": "PlayerAnims-GetList",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Target/anims.vue",
+			"line": 29
+		},
+		{
+			"name": "PlayerAnims-SetAnim",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Target/anims.vue",
+			"line": 38
+		},
+		{
+			"name": "Target-ShowMenu",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/components/Target/index.vue",
+			"line": 34
+		},
+		{
+			"name": "Target-Reset",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/components/Target/index.vue",
+			"line": 35
+		},
+		{
+			"name": "Target-CloseMenu",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Target/index.vue",
+			"line": 41
+		},
+		{
+			"name": "Target-CloseMenu",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Target/index.vue",
+			"line": 57
+		},
+		{
+			"name": "Target-SelectItem",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Target/index.vue",
+			"line": 76
+		},
+		{
+			"name": "FactionActions-GetItems",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Target/organization.vue",
+			"line": 86
+		},
+		{
+			"name": "FactionActions-Call",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Target/organization.vue",
+			"line": 90
+		},
+		{
+			"name": "Vehicle-GetPassengers",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Target/passengers.vue",
+			"line": 13
+		},
+		{
+			"name": "BusinessTrade-GetData",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Trading/business/index.vue",
+			"line": 46
+		},
+		{
+			"name": "BusinessTrade-SendOffer",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Trading/business/index.vue",
+			"line": 58
+		},
+		{
+			"name": "BusinessTrade-ConfirmOffer",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Trading/business/index.vue",
+			"line": 62
+		},
+		{
+			"name": "BusinessTrade-RefuseOffer",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Trading/business/index.vue",
+			"line": 66
+		},
+		{
+			"name": "HouseTrade-GetData",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Trading/house/index.vue",
+			"line": 50
+		},
+		{
+			"name": "HouseTrade-SendOffer",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Trading/house/index.vue",
+			"line": 62
+		},
+		{
+			"name": "HouseTrade-ConfirmOffer",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Trading/house/index.vue",
+			"line": 66
+		},
+		{
+			"name": "HouseTrade-RefuseOffer",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Trading/house/index.vue",
+			"line": 70
+		},
+		{
+			"name": "VehicleTrade-GetData",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "server",
+			"file": "src_ui_vue/src/components/Trading/vehicle/index.vue",
+			"line": 62
+		},
+		{
+			"name": "VehicleTrade-SendOffer",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Trading/vehicle/index.vue",
+			"line": 76
+		},
+		{
+			"name": "VehicleTrade-ConfirmOffer",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Trading/vehicle/index.vue",
+			"line": 80
+		},
+		{
+			"name": "VehicleTrade-RefuseOffer",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/components/Trading/vehicle/index.vue",
+			"line": 84
+		},
+		{
+			"name": "playerStopRotation",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/composables/use-rotation.ts",
+			"line": 25
+		},
+		{
+			"name": "playerRotation",
+			"side": "ui",
+			"kind": "call",
+			"transport": "rpc",
+			"target": "client",
+			"file": "src_ui_vue/src/composables/use-rotation.ts",
+			"line": 35
+		},
+		{
+			"name": "Inventory-SetCapacity",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/composables/use-storage-inventory.ts",
+			"line": 135
+		},
+		{
+			"name": "App-SetDate",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/stores/events.ts",
+			"line": 10
+		},
+		{
+			"name": "App-SetOnline",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/stores/events.ts",
+			"line": 11
+		},
+		{
+			"name": "HUD-SetVisible",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/stores/events.ts",
+			"line": 14
+		},
+		{
+			"name": "HUD-SetCapture",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/stores/events.ts",
+			"line": 15
+		},
+		{
+			"name": "Player-SetSatiety",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/stores/events.ts",
+			"line": 18
+		},
+		{
+			"name": "Player-SetMoney",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/stores/events.ts",
+			"line": 19
+		},
+		{
+			"name": "Player-SetTasks",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/stores/events.ts",
+			"line": 20
+		},
+		{
+			"name": "Player-SetId",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/stores/events.ts",
+			"line": 21
+		},
+		{
+			"name": "Player-SetBonus",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/stores/events.ts",
+			"line": 22
+		},
+		{
+			"name": "Phone-IncomingCall",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/stores/events.ts",
+			"line": 25
+		},
+		{
+			"name": "Phone-AcceptCall",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/stores/events.ts",
+			"line": 31
+		},
+		{
+			"name": "Phone-DeclineCall",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/stores/events.ts",
+			"line": 32
+		},
+		{
+			"name": "Phone-SetWallpaper",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/stores/events.ts",
+			"line": 33
+		},
+		{
+			"name": "3Dsound-Play",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/utils/3dsound.ts",
+			"line": 65
+		},
+		{
+			"name": "3Dsound-Stop",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/utils/3dsound.ts",
+			"line": 66
+		},
+		{
+			"name": "3Dsound-SetVolume",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/utils/3dsound.ts",
+			"line": 67
+		},
+		{
+			"name": "Notifications-ShowItem",
+			"side": "ui",
+			"kind": "handler",
+			"transport": "rpc",
+			"target": "ui",
+			"file": "src_ui_vue/src/utils/notifications.ts",
+			"line": 51
+		}
+	]
+}

@@ -1,6 +1,6 @@
 # План перехода StreetRP: RAGE MP → FiveM (Qbox, Lua, MariaDB)
 
-Дата: 10.10.2026 · Статус: утверждаемый план, реализация не начата.
+Дата: 10.10.2026 · Решения раздела 1 подтверждены 30.10.2026 (основа — Qbox, Lua, чистый старт игроков) · Статус: этап 0 начат (реестр RPC/событий готов).
 
 ## 1. Принятые решения
 
@@ -26,9 +26,10 @@
 
 | Часть | Объём |
 |---|---|
-| Сервер `src_server/src` | 241 TS-модуль, ~16 000 строк |
-| Клиент `src_client/src` | 99 TS-модулей, ~9 000 строк |
-| UI `src_ui_vue` | 39 маршрутов, 218 RPC-имён (см. `CONVERTATION.md`) |
+| Сервер `src_server/src` | 241 TS-модуль, ~12 900 строк |
+| Клиент `src_client/src` | 99 TS-модулей, ~7 400 строк |
+| UI `src_ui_vue` | 38 маршрутов (37 экранов + redirect), 213 RPC-имён в UI (см. `CONVERTATION.md`) |
+| Реестр RPC/событий | 408 уникальных имён, 216 серверных и 141 клиентский обработчик — `tools/registry/REGISTRY.md` |
 | Модели Mongo | 16: User, Character, Vehicle, House, Business, Faction (ranks/members), GangZone, Job, Service, Clothes, Promo, Report, Token, Wanted, AdminLog/FactionLog, Counter |
 | Статические данные в `database.sql` | businesses 64, houses 26, factions 9, gangzones 90, services 21, jobs 5, clothes 989 |
 | Предметы (`data/inventory.json`) | 81: weapon 32, fish 11, clothes 9, tool 8, food 4, alcohol 4, ammo 3, armor 3, backpack 3, drugs 2, medicine 2 |
@@ -342,7 +343,7 @@ srp_* (server Lua: игровые правила)
 1. Поднять копию RAGE-сервера и записать эталонные сценарии по каждому домену таблицы 3: вход, условия, цифры, результат.
 2. Dev-стенд: копия Qbox-сборки, отдельная БД MariaDB, git-репозиторий `resources/[streetrp]`, версии всех ресурсов шаблона зафиксированы.
 3. Применить раздел 3.1: выключить ресурсы, проверить зависимости, проверить запуск чистого сервера.
-4. Скрипт-реестр: все `mp.events.add`, `rpc.register`, `callServer`/`callClient` (имя → файл) — по нему отслеживается прогресс.
+4. Скрипт-реестр: все `mp.events.add`, `rpc.register`, `callServer`/`callClient` (имя → файл) — по нему отслеживается прогресс. **Готово:** `tools/registry/scan.mjs` → `REGISTRY.md`/`registry.json` (408 имён; найдены мёртвые вызовы `playerWeaponShot`, `VehicleSync-SetDirtLevel` — проверить на этапе 1).
 5. Аккаунт Mailtrap: подтвердить домен, получить токены Sandbox и Sending.
 
 **Готово:** реестр механик, dev-стенд с урезанным шаблоном, закрыты вопросы раздела 11.
@@ -430,6 +431,7 @@ streetrp/
 ├── resources/[ox]/ox_inventory/     # форк, изменён только web/ (submodule)
 ├── src_ui_vue/                      # Vue UI → сборка в resources/[streetrp]/srp_ui/web
 ├── tools/srp_import/                # одноразовый импорт статики
+├── tools/registry/                  # реестр RPC/событий (scan.mjs → REGISTRY.md, registry.json)
 ├── server.cfg.example               # порядок ensure, конвары (без секретов)
 ├── PLAN.md
 └── legacy/                          # src_server, src_client, packages, client_packages — эталон до завершения переноса
